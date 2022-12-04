@@ -43,6 +43,9 @@ function focus_chk(type) {
         if (!reg_pw.test(pw.val())) {
             set_message('8~16자 영문 대문자 또는 소문자, 숫자, 특수문자(#?!@$ %^&*-)를 사용하세요.', 'pw')
         }
+        else if(pw.val().search(/\s/) != -1){
+            set_message('비밀번호에는 공백이 들어갈 수 없습니다.', 'pw')
+        }
 
         blank_chk($('#reg_msg_pw'), $('#pw'))
     }
@@ -56,11 +59,13 @@ function focus_chk(type) {
         if (!reg_pw.test(pw.val())) {
             set_message('8~16자 영문 대문자 또는 소문자, 숫자, 특수문자(#?!@$ %^&*-)를 사용하세요.', 'pw')
         }
+        else if(pw.val().search(/\s/) != -1){
+            set_message('비밀번호에는 공백이 들어갈 수 없습니다.', 'pw')
+        }
         blank_chk($('#reg_msg_pw'), $('#pw'))
         if (pw.val() != pw_ag.val()) {
             set_message('동일한 비밀번호를 사용해주세요', 'pw_ag')
         }
-
         blank_chk($('#reg_msg_pw_ag'), $('#pw_ag'))
     }
     else if (type == "birth") {
@@ -192,6 +197,10 @@ function form_chk(frm) {
     if (!reg_pw.test(frm.pw.value)) {
         set_form_message('8~16자 영문 대문자 또는 소문자, 숫자, 특수문자(#?!@$ %^&*-)를 사용하세요.', frm.pw, 'pw')
         console.log(frm.pw.value);
+        return false;
+    }
+    if(frm.pw.value.search(/\s/) != -1){
+        set_form_message('비밀번호에는 공백이 들어갈 수 없습니다.', frm.pw, 'pw')
         return false;
     }
     if ((frm.pw_ag.value != frm.pw.value)) {
