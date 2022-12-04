@@ -150,22 +150,22 @@ function remove_msg(el){
             $('#reg_msg_pw').text("");
         }
     }
-    if(el == 'pw_ag'){
+   else if(el == 'pw_ag'){
         if (pw.val() == pw_ag.val()) {
             $('#reg_msg_pw_ag').text("");
         }
     }
-    if(el == 'u_name'){
+   else if(el == 'u_name'){
         if (reg_name.test(u_name.val())) {
             $('#reg_msg_u_name').text("");
         }
     }
-    if(el == 'birth'){
+   else if(el == 'birth'){
         if (reg_birth.test(birth.val())) {
             $('#reg_msg_birth').text("");
         }
     }
-    if(el == 'email'){
+   else if(el == 'email'){
         if (reg_email.test(email.val())) {
             $('#reg_msg_email').text("");
         }
@@ -224,12 +224,12 @@ function form_chk(frm) {
         frm.promo_btn.value = "false";
         frm.promo_btn.checked = true;
         console.log("ccc: " + frm.promo_btn.value);
-        alert("회원가입이 완료되었습니다1");
+        alert("회원가입이 완료되었습니다");
         return true;
     }
     else {
         frm.promo_btn.value = "true";
-        alert("회원가입이 완료되었습니다2");
+        alert("회원가입이 완료되었습니다");
         return true;
     }
 }
