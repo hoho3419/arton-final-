@@ -1,0 +1,429 @@
+/* ***************************메인 슬라이드 ***************************** */
+/*상단이동*/
+.btn_gotop{
+    width: 70px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor:pointer;
+	padding:15px;
+    z-index: 999999;
+    display: none;
+}
+.main_banner {
+
+    max-width: 1410px;
+    min-width: 1300px;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 500px;
+
+}
+.banner_box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: 40px;
+}
+.banner {
+    margin-top: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+
+}
+.banner img{
+    width: 365px;
+    height: 405px;
+}
+/*슬라이드 버튼*/
+.slide{
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    top: 280px;
+    z-index: 99;
+    cursor: pointer;
+}
+.slide_prev {
+    left: 30px;  
+}
+.slide_next {
+    right: 30px;
+}
+/* 이미지 가운데로 올시 -> scale */
+.on{
+    transform: scale(1.2);
+}
+
+
+/* *************************** what's hot ***************************** */
+.hot_sec_title{
+    width: 100%;
+    height: 152px;
+    line-height: 152px;
+}
+.title_text{
+    font-size: 40px;
+    font-weight: 800;
+    color: black;
+    text-align: center;
+}
+.title_text>span{
+    color: #008049;
+}
+.hot_sec{
+    position: relative;
+}
+.hot_list{
+    width: 100%;
+    max-width: 1200px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 45px;
+}
+.hot_sec>a>img{
+    width: 180px;
+    height: 250px;
+    transition: .3s;
+}
+.hot_sec:hover.hot_sec>a>img{
+    scale: 1.2;
+    box-shadow: 0 0 10px 0 rgb(55 55 55 / 50%);
+}
+.hot_sec_dis_box{
+    width: 50px;
+    height: 50px;
+    background-color: #f1c40f;
+    border-radius: 18px;
+    position: absolute;
+    top: 195px;
+    right: 5px;
+}
+.hot_per_place{
+    color: #828282;
+}
+.dis_txt{
+    font-size: 19px;
+    line-height: 50px;
+    text-align: center;
+}
+.hot_sec_txt_box{
+    text-align: center;
+        /* scale용 */
+    margin-top: 30px; 
+}
+/*텍스트 라인 넘치지 않게 하는 용*/
+.hot_sec_txt_box div{
+    max-width: 180px;
+    max-height: 65px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+}
+.hot_per_name{
+    height: 40px;
+}
+.disc_msg{
+    font-style: italic;
+    color: #008049;
+}
+/* *************************** ranking ***************************** */
+.ranking_recommend{
+    height: 650px;
+    display: flex;
+    justify-content: space-around;
+}
+.ranking{
+    width: 478px;
+    height: 480px;
+    margin-top: 54px;
+}
+.title_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 66px;
+}
+.ranking_box{
+    width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.ranking_title{
+    font-size: 26px;
+    font-weight: 800;
+}
+.more_info{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 25px;
+    background-color: #008049;
+    color: white;
+    font-weight: 800;
+    display: inline-block;
+    border-radius: 5px;
+}
+.ranking_list_box{
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    border-top: 2px solid #008049;
+}
+
+.r_box_list{
+    height: 58px;
+    border-bottom: 2px solid #008049;
+    display: flex;
+    white-space: nowrap;
+    transition: .3s;
+    align-items: center;
+    padding-left: 3px;
+    overflow: hidden;
+}
+.r_box_list>a{
+    display: flex;
+    gap: 13px;
+    width: 100%;
+}
+.ranking_num{
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    font-weight: 800;
+}
+.ranking_img{
+    display: none;
+}
+.ranking_txt{
+    display: inline-block;
+    margin-left: 30px;
+    width: 80%;
+}
+.r_txt_1>p{
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+.r_box_list:hover .r_txt_1>p{
+    width: 244px;
+}
+.r_txt_2{
+    display: none;
+}
+/*호버시*/
+.r_box_list:hover{
+    height: 190px;
+    justify-content: center;
+    position: relative;
+}
+/*순위*/
+.r_box_list:hover .ranking_num{
+    position: absolute;
+    top: 43%;
+}
+.r_box_list:hover .ranking_img{
+    width: 80px;
+    height: 112px;
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 16%;
+}
+.r_box_list:hover .r_txt_2{
+    display: block;
+}
+.r_box_list:hover .ranking_txt{
+    position: absolute;
+    top: 26%;
+    left: 36%;
+}
+/*텍스트 넘칠시 용도*/
+.r_box_list:hover .ranking_txt p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 230px;
+    max-height: 50px;
+}
+/* *************************** recommend(what about this?) ***************************** */
+.recommend{
+    width: 900px;
+    height: 500px;
+    margin-top: 54px;
+}
+.what_about_title{
+    height: 30px;
+    line-height: 30px;
+    font-size: 26px;
+    font-weight: 800;
+}
+.what_about_body{
+    width: 100%;
+    height: 470px;
+    background-color: rgb(48 68 56);
+    border-radius: 25px;
+    margin-top: 10px;
+    /* 부모 */
+    position: relative;
+}
+.w_a_txtbox{
+     position: absolute;
+     top: 45%;
+     left: 5%;
+     display: none;
+}
+.w_a_txtbox>div:nth-child(1){
+    font-size: 30px;
+    font-weight: 800;
+    width: 254px;
+    color: #ffffffa1;
+}
+.w_a_txtbox>div:nth-child(2){
+    font-size: 18px;
+    color: gainsboro;
+    display: flex;
+    flex-wrap: wrap;
+}
+.w_a_wrap>a>img{
+    width: 300px;
+    height: 388px;
+    position: absolute;
+    top: 22%;
+    left: 36%;
+    display: none;
+    border-radius: 25px;
+}
+/*ul*/
+.w_a_per_txt_list{
+    height: 60%;
+    position: absolute;
+    top: 13%;
+    right: 2%;
+    gap: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+/*공연제목*/
+.per_title_item>span{
+    cursor: pointer;
+    color: gainsboro;
+    font-size: 26px;
+    display: block;
+    font-weight: 800;
+    z-index: 999;
+}
+/*밑줄용*/
+.blind{
+    width: 0;
+    height: 8px;
+    background-color: #dcdcdc;
+    border-radius: 25px;
+    margin-top: 3px;
+    opacity: 0;
+}
+/*호버시*/
+.per_title_item:hover .blind{
+    opacity: 1;
+    transition: all .5s;
+    width: 100%;
+}
+
+/* *************************** ARToN'S PICK ***************************** */
+/*텍스트*/
+.picks_title{
+    width: 100%;
+    height: 152px;
+    line-height: 152px;
+}
+.picks_title_text{
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+}
+/* oN가리킴 */
+.picks_title_text>span:nth-of-type(2){ 
+    color: #008049;
+}
+/*그림 안*/
+.picks_body{
+    width: 216px;
+    position: relative;
+}
+.picks_img_box>img{
+    width: 216px;
+    height: 300px;
+    object-fit: fill;
+}
+.picks_list{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    height: 900px;
+}
+.picks_box{
+    width: calc(1200px / 4);
+    box-sizing: border-box;
+    height: 400px;
+    padding: 0 50px;
+}
+.msg_box{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 99px;
+    transform: translateY(0);
+    background-color: rgba(148, 148, 148, 0.75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 800;
+    text-overflow: ellipsis;
+    transition: .2s;
+    overflow: hidden;
+}
+.picks_per_pla{
+    font-style: italic;
+    color: #828282;
+}
+
+/*호버시*/
+.picks_sec:hover > .msg_box{
+    opacity: 1;
+    height: 45%;
+}
+/*텍스트*/
+.picks_txt{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 14px;
+}
+/*텍스트 라인 넘치지 않게 하는 용 */
+.picks_txt div{
+    max-width: 216px;
+    max-height: 50px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+}
+.picks_per_name{
+    height: 40px;
+}
+

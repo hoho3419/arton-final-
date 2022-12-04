@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtOn</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script defer src="./js/cate.js"></script>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/cate.css">
+    <link rel="icon" href="./img/arton_logo_withoutletter.png">
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header_area">
+                <div class="logo"><a href="#"></a></div>
+                <ul class="menu_ul">
+                    <li>
+                        <a href="#">콘서트</a>
+                    </li>
+                    <li>
+                        <a href="#">뮤지컬</a>
+                    </li>
+                    <li>
+                        <a href="#">연극</a>
+                    </li>
+                    <li>
+                        <a href="#">클래식</a>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                    </li>
+                    <li>
+                        <a href="#">아동</a>
+                    </li>
+                </ul>
+                <div class="icon_list">
+                    <div class="search_area">
+                        <div class="search">
+                            <a href="#">
+                                <div class="search_bar">
+                                </div>
+                            </a>
+                        </div>
+                        <input id="srch_con" type="text" value="aaa">
+                    </div>
+                    <div class="icon_area">
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="rank_img"></div>
+                                <span class="text">랭킹</span>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="login_img"></div>
+                                <div class="text">로그인</div>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="my_img"></div>
+                                <div class="text">마이페이지</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <img src="./img/상단이동icon.png" alt="" class="btn_gotop">
+                <div class="main_banner">
+                    <ul class="banner_box">
+                        <li class="banner">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="banner">
+                            <a href="">
+                                <img src="./img/concert/concert_2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="banner">
+                            <a href="">
+                                <img src="./img/concert/concert_4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="banner">
+                            <a href="">
+                                <img src="./img/concert/concert_5.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="banner">
+                            <a href="">
+                                <img src="./img/concert/concert_7.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="slide_box">
+                        <div class="slide slide_prev">
+                            <img src="./img/slide_prev.png" alt="‹">
+                        </div>
+                        <div class="slide slide_next">
+                            <img src="./img/slide_next.png" alt="›">
+                        </div>
+                    </div>
+                </div>
+                <div class="whats_hot comtents_area">
+                    <div class="hot_sec_title">
+                        <div class="title_text">WHAT'S
+                            <span>HOT</span>
+                        </div>
+                    </div>
+                    <ul class="hot_list">
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 /
+                                        특별초청재즈음악인 : 키퍼]</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot_sec" id="w_hot">
+                            <a href="">
+                                <img src="./img/concert/concert_1.jpg" alt="concert1">
+                                <div class="hot_sec_dis_box">
+                                    <div class="dis_txt">15%</div>
+                                </div>
+                                <div class="hot_sec_txt_box">
+                                    <div class="hot_per_name">짙은, 겨울</div>
+                                    <div class="hot_per_place">‹코엑스 컨퍼런스룸›</div>
+                                    <div class="disc_msg">아트온 회원할인 15%</div>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="ranking_recommend comtents_area">
+                    <div class="ranking">
+                        <div class="ranking_box">
+                            <div class="title_box">
+                                <span class="ranking_title">WEEKLY RANKING</span>
+                                <a href="#"><span class="more_info">+</span></a>
+                            </div>
+                            <ul class="ranking_list_box">
+                                <li class="r_box_list">
+                                    <a href="#">
+                                        <div class="ranking_num">1위</div>
+                                        <img src="./img/concert/concert_1.jpg" alt="concert1" class="ranking_img">
+                                        <div class="ranking_txt">
+                                            <div class="r_txt_1">
+                                                <p>짙은 콘서트〈짙은, 겨울〉</p>
+                                            </div>
+                                            <div class="r_txt_2">
+                                                <p>
+                                                    2022.12.28 ~ 2022.12.28
+                                                    <br>
+                                                    코엑스 컨퍼런스룸 401호
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="ranking_box">
+                                <li class="r_box_list">
+                                    <a href="">
+                                        <div class="ranking_num">2위</div>
+                                        <img src="./img/concert/concert_2.jpg" alt="concert2" class="ranking_img">
+                                        <div class="ranking_txt">
+                                            <div class="r_txt_1">
+                                                <p>MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 /
+                                                    특별초청재즈음악인 : 키퍼]</p>
+                                            </div>
+                                            <div class="r_txt_2">
+                                                <p>
+                                                    2022.12.28 ~ 2022.12.28
+                                                    <br>
+                                                    코엑스 컨퍼런스룸 401호
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="ranking_box">
+                                <li class="r_box_list">
+                                    <a href="">
+                                        <div class="ranking_num">3위</div>
+                                        <img src="./img/concert/concert_1.jpg" alt="concert1" class="ranking_img">
+                                        <div class="ranking_txt">
+                                            <div class="r_txt_1">
+                                                <p>짙은 콘서트〈짙은, 겨울〉</p>
+                                            </div>
+                                            <div class="r_txt_2">
+                                                <p>
+                                                    2022.12.28 ~ 2022.12.28
+                                                    <br>
+                                                    코엑스 컨퍼런스룸 401호
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="ranking_box">
+                                <li class="r_box_list">
+                                    <a href="">
+                                        <div class="ranking_num">4위</div>
+                                        <img src="./img/concert/concert_1.jpg" alt="concert1" class="ranking_img">
+                                        <div class="ranking_txt">
+                                            <div class="r_txt_1">
+                                                <p>짙은 콘서트〈짙은, 겨울〉</p>
+                                            </div>
+                                            <div class="r_txt_2">
+                                                <p>
+                                                    2022.12.28 ~ 2022.12.28
+                                                    <br>
+                                                    코엑스 컨퍼런스룸 401호
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="ranking_box">
+                                <li class="r_box_list">
+                                    <a href="">
+                                        <div class="ranking_num">5위</div>
+                                        <img src="./img/concert/concert_1.jpg" alt="concert1" class="ranking_img">
+                                        <div class="ranking_txt">
+                                            <div class="r_txt_1">
+                                                <p>짙은 콘서트〈짙은, 겨울〉</p>
+                                            </div>
+                                            <div class="r_txt_2">
+                                                <p>
+                                                    2022.12.28 ~ 2022.12.28
+                                                    <br>
+                                                    코엑스 컨퍼런스룸 401호
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recommend">
+                        <div class="what_about_box">
+                            <div class="what_about_title">WHAT ABOUT THIS?</div>
+                            <div class="what_about_body">
+                                <ul class="w_a_per_slide">
+                                    <li class="w_a_per_li">
+                                        <div class="w_a_wrap">
+                                            <a href="#" class="w_a_link">
+                                                <div class="w_a_txtbox">
+                                                    <div class="w_a_t_text txtbox_title">[화원]</div>
+                                                    <div class="w_a_t_text txtbox_subtitle">2022.11.25 ~ 2022.12.04</div>
+                                                </div>
+                                                <img class="w_a_img" src="./img/img_slide/img_slide4.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="w_a_per_li">
+                                        <div class="w_a_wrap">
+                                            <a href="#" class="w_a_link">
+                                                <div class="w_a_txtbox">
+                                                    <div class="w_a_t_text txtbox_title">[난쟁이들]</div>
+                                                    <div class="w_a_t_text txtbox_subtitle">2022.01.25 ~ 2022.04.10</div>
+                                                </div>
+                                                <img class="w_a_img" src="./img/img_slide/img_slide3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="w_a_per_li">
+                                        <div class="w_a_wrap">
+                                            <a href="#" class="w_a_link">
+                                                <div class="w_a_txtbox">
+                                                    <div class="w_a_t_text txtbox_title">[Earmuffs]</div>
+                                                    <div class="w_a_t_text txtbox_subtitle">2022.12.29 ~ 2022.12.29</div>
+                                                </div>
+                                                <img class="w_a_img" src="./img/img_slide/img_slide2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="w_a_per_li">
+                                        <div class="w_a_wrap">
+                                            <a href="#" class="w_a_link">
+                                                <div class="w_a_txtbox">
+                                                    <div class="w_a_t_text txtbox_title">[줄리엣과 줄리엣]</div>
+                                                    <div class="w_a_t_text txtbox_subtitle">2022.06.14 ~ 2022.07.07</div>
+                                                </div>
+                                                <img class="w_a_img" src="./img/img_slide/img_slide1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="w_a_per_txt_list">
+                                    <li class="per_title_item">
+                                            <span class = "w_a_t_text list_text">[화원]</span>
+                                            <span class = "blind"></span>
+                                    </li>
+                                    <li class="per_title_item">
+                                            <span class = "w_a_t_text list_text">[난쟁이들]</span>
+                                            <span class = "blind"></span>
+                                    </li>
+                                    <li class="per_title_item">
+                                            <span class = "w_a_t_text list_text">[Earmuffs]</span>
+                                            <span class = "blind"></span>
+                                    </li>
+                                    <li class="per_title_item">
+                                            <span class = "w_a_t_text list_text">[줄리엣과 줄리엣]</span>
+                                            <span class = "blind"></span>
+                                    </li>
+                                    
+                                </ul>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arton_pick comtents_area">
+                    <div class="picks_title">
+                        <div class="picks_title_text">
+                            <span>ART</span><span>oN</span><span>'S PICKs</span>
+                        </div>
+                    </div>
+                    <ul class="picks_list">
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_8.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_2.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_3.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_4.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_5.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_6.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_7.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="picks_box">
+                            <a href="">
+                                <div class="picks_body">
+                                    <div class="picks_sec">
+                                        <div class="picks_img_box">
+                                            <img src="./img/concert/concert_8.jpg" alt="concert8">
+                                        </div>
+                                        <div class="msg_box">
+                                            <div class="msg_txt">"낭만 멀리서 찾지 말자"</div>
+                                        </div>
+                                    </div>
+                                    <div class="picks_txt">
+                                        <div class="picks_per_name">MY AUNT MARY 단독공연 [SAME SAME but DIFFERENT 2022]</div>
+                                        <div class="picks_per_pla">‹왓챠홀 WATCHA HALL›</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="contents_area">
+                <a href="#"><div class="f_logo">아트온 로고</div></a>
+                <div class="f_desc">
+                    <p class="f_title">아트온</p>
+                    <p>서울특별시 강남구 서초동 서울로 1길 1 대표 아트온</p>
+                    <p>사업자 등록번호: 1001-1314-15444 / 통신판매번호: 제 2002-00000호</p>
+                    <p>Copyright YM_ARTON INC.ALL Rights Reserved</p>
+                </div>
+                <div class="cst_num">
+                    <img src="./img/call.png" alt="">
+                    <span>고객센터</span>
+                    <p class="f_number">1544-0000</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

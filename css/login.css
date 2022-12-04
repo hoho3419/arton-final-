@@ -1,0 +1,129 @@
+/*****************************로그인 섹션******************************/
+.login_box{
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 60px 0;
+    width: 958px;
+    border: solid 1px #d8d8d8;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+}
+.login_logo{
+    width: 180px;
+    height: 80px;
+    background: url(../img/arton_main_logo.png) no-repeat center / contain;
+    margin: 0 auto;
+    padding-top: 60px;
+    text-indent: -9999px;
+}
+/*****************************로그인 영역******************************/
+#login_area{
+    width: 50%;
+}
+.inner_login{
+    width: 435px;
+    height: 380px;
+    background-color: #008049;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 5px;
+}
+.login_title{
+    font-size: 25px;
+    font-weight: 700;
+}
+#id{
+    margin-top: 18px;
+}
+.id_pw{
+    width: 330px;
+    height: 45px;
+    font-size: 14px;
+    border: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 25%;
+    border-radius: 5px;
+    outline: none;
+}
+.id{
+    margin-top: 45px;
+}
+/* 로그인 기억하기 */
+.remem_id{
+    width: 100%;
+    height: 25px;
+    position: relative;
+    margin-top: 6px;
+}
+#remem_icon{
+   display: none;
+}
+.remem_title{
+    background-color: #008049;
+    position: absolute;
+    top: 3px;
+    left: 63px;
+    cursor: pointer;
+}
+.remem_real_icon{
+    display: inline-block;
+    background: url(../img/login/m_chcek_off_2.png) no-repeat center / contain;
+    width: 20px;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 38px;
+}
+#remem_icon:checked+label>.remem_real_icon{
+    background: url(../img/login/m_chcek_off_.png) no-repeat center / contain;
+}
+/*로그인 메세지*/
+.login_msg{
+    font-size: 15px;
+    color:#fcffcb;
+}
+button{
+    width: 330px;
+    height: 45px;
+    border: none;
+    background: #fcffcb;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #008049;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.choice_box{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+li{
+    margin-right: 5px;
+    padding-right: 3px;
+    border-right: 1px solid black;
+}
+li:nth-last-child(1){
+    border: none;
+}
+.img_area{
+    width: 50%;
+}
+.inner_img{
+    position: absolute;
+    width: 50%;
+    top: 110px;
+    right: -18px;
+    height: 520px;
+}
+.choice_box>li>a:hover{
+    font-weight: 700;
+}
+

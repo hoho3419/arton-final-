@@ -1,0 +1,590 @@
+body{margin: 0%;}
+ul{list-style: none; margin: 0; padding: 0%;}
+a{text-decoration: none; color: inherit;}
+.contents_area{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* *****************************공연제목***************************** */
+.title_section{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    border-bottom: 2px solid ;
+}
+.big_title{
+    font-size: 35px;
+    font-weight: 900;
+}
+.item_txt{
+    font-size: 17px;
+}
+.item_date{
+    padding: 0 15px 0 5px;
+    position: relative;
+}
+.item_date::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #d6d6d6;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.location_icon{
+    width: 15px;
+    
+    position: relative;
+    top: 3px;
+}
+/* *****************************공연정보***************************** */
+/*왼쪽 부분(포스터)*/
+.item_section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-bottom: 1px solid #aaa;
+}
+.img_box{
+    width: 430px;
+    height: 600px;
+    position: relative;
+}
+.img_box > img{
+    width: 430px;
+    height: 600px;
+}
+/*좋아요*/
+.like_box{
+    width: 100%;
+    height: 50px;
+    
+    padding: 10px;
+    box-sizing: border-box;
+
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+    gap:10px;
+
+    color: #22974a;
+}
+.like_box > img{
+    width: 32px;
+    cursor: pointer;
+}
+.full_heart{
+    display: none;
+}
+/*오른쪽 부분(공연 정보)*/
+.info_box{
+    width: 600px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.item_table{
+    width: 100%;
+}
+.item_sec_name{
+    width: 120px;
+    padding: 20px 0;
+    font-weight: 600;
+}
+.item_sec_body{
+    padding: 20px 5px;
+}
+.price_box{
+    width: 100%;
+    height: 100px;
+    background-color: #fcffcb79;
+}
+.seat{
+    padding: 5px;
+}
+.green{color:#22974a;}
+/* *****************************예매하기***************************** */
+.booking_section{
+    width: 90%;
+    height: 300px;
+    margin: 80px auto;
+
+    border: 2px solid #008049;
+    background-color: #fafafa;;
+    
+}
+.booking_process{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.choice_title{
+    width: calc(100% / 3);
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 900;
+
+}
+.option_choice_sec{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+.option_box{
+    width: calc(100% / 3);
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+.option_box:nth-child(3){
+    border: none;
+}
+.choice_btn{
+    width: 250px;
+    height: 40px;
+    display: block;
+    background: #ddd;
+    color: rgb(99, 96, 96);
+    margin: 20px auto;
+    
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+}
+.choice_btn:hover{
+    background: #fff;
+    border: 1px solid #008049;
+    color:#22974a;
+    cursor: pointer;
+}
+.btn_chk{
+    background: #008049;
+    color: #fcffcb;
+}
+.show_time{
+    display: none;
+}
+.seat_ment{
+    margin-top: 30px;
+    color: #333;
+}
+.seat_stock_box{
+    width: 280px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    background-color: #fff;
+    text-align: left;
+    display: none;
+}
+.booking_btn_sec{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.booking_btn{
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #008049;
+    color:#fcffcb;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+.booking_btn:hover{
+    background-color: #2f835f;
+}
+/* *****************************탭메뉴***************************** */
+.datail_info_section{
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #aaa;
+}
+.tabs{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;  
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+}
+.tab_title{
+    width: calc(100% / 3);
+    line-height: 80px;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.tab_border_bot{
+    border-bottom: 5px solid #008049;
+}
+/* 마우스 호버시 밑줄 왼쪽에서 오른쪽 */
+.tab_title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 5px;
+    background-color: #008049;
+}
+.tab_title:hover::after{
+    transition: all .5s;
+    width: 100%;
+}
+.tab_content{
+    display: none;
+    height: auto;
+    text-align: center;
+}
+.tab_current{
+    display: block;
+}
+/*스크롤이벤트(탭)*/
+.tab_event{
+    position: fixed;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 1200px;   
+}
+/* **********************************공연 상세 정보 탭 바디*********************** */
+.btn_gotop{
+    width: 70px;
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor:pointer;
+	padding:15px;
+    z-index: 999999;
+}
+.small_title{
+    font-size: 25px;
+    font-weight: 900;
+
+    margin: 70px 0;
+}
+.perfom_info_img{
+    vertical-align: middle;
+}
+
+.notice_table{
+    border-top: 3px solid #008049;
+    border-collapse: collapse;
+    width: 960px;
+    margin: 50px auto;
+
+}
+.table_title{
+    padding: 15px 0 ;
+    background: #fcffcb;
+    font-size: 20px;
+    color: #376948;
+    border:1px solid #ddd;
+}
+.table_content{
+    text-align: left;
+    padding: 10px 10px 10px 20px;
+    font-size: 13px;
+    color: #333;
+    line-height: 25px;
+    border:1px solid #ddd;
+}
+.detail_info_table{
+    width: 600px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.detail_tb_title{
+    padding: 5px 0;
+    background-color: #ffc30e90;
+    color: #333;
+    border:1px solid #ddd;
+}
+.detail_tb_content{
+    padding: 5px 0;
+    font-size: 12px;
+    color: #333;
+    border:1px solid #ddd;
+}
+.red{
+    color:red;
+}
+
+/* **********************************리뷰 탭*********************** */
+.review_area{
+    width: 100%;
+    height: 230px;
+    margin: 30px 0;
+    border: 3px solid #008049;
+}
+.left_line{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+/*별점 파트!!!!*/
+.star_rating_area{
+    display: flex;
+    gap: 10px;
+    align-items:flex-end;
+    margin: 10px 0;
+}
+.star_rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    justify-content: space-around;
+    padding: 1px;
+}
+.star_rating input {
+    display: none;
+}
+
+.star_rating label {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star_rating :checked~label {
+    color: #ffc30e;
+}
+
+.star_rating label:hover,
+.star_rating label:hover~label {
+    color: #ffc30e90;
+}
+.rating_score {
+    font-size: 18px;
+    font-weight: 600;
+    color: #376948;
+}
+/*리뷰 작성 칸!!!!*/
+.review_upload_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.review_content_area {
+    width: 80%;
+    height: 130px;
+    background-color: #fafafa;
+}
+#review_content {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    outline: none;
+    border: none;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #fafafa;
+}
+.text_counter_area {
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+#btn_submit_review {
+    width: 180px;
+    height: 50px;
+    background-color: #008049;
+    color: #fcffcb;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+/*리뷰 리스트!!!*/
+.review_list_area {
+    width: 100%;
+}
+.rv_list_top {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 900;
+    border-bottom: 2px solid #008049;
+}
+.rv_count_area {
+    display: flex;
+}
+.rv_sort_area {
+    display: flex;
+}
+.rv_sorting {
+    padding: 0 5px;
+}
+.rv_sorting:hover {
+    color: #22974a;
+}
+.rv_list_box {
+    width: 100%;
+    height: 100%;
+    /* 여기 heigth 값은 리뷰 내용 들어가게 되면 빼야할듯? 리뷰 글자수에 따라 동적으로하게 */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaa;
+    font-size: 15px;
+}
+.rv_user_id {
+    width: 150px;
+    align-self: center;
+}
+.rv_uploaded_box {
+    width: 850px;
+    max-height: 155px;
+    text-align: left;
+    gap: 5px;
+    word-break: break-all;
+}
+.rv_uploaded {
+    width: 100%;
+    padding: 5px 0;
+}
+#rv_upload_date {
+    font-size: 12px;
+}
+.rv_right_box {
+    width: 100px;
+    position: relative;
+    padding: 5px;
+}
+.rv_star_rating {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.star0 {background: url(../img/star_0.jpg) no-repeat center / contain;}
+.star1 {background: url(../img/star_1.jpg) no-repeat center / contain;}
+.star2 {background: url(../img/star_2.jpg) no-repeat center / contain;}
+.star3 {background: url(../img/star_3.jpg) no-repeat center / contain;}
+.star4 {background: url(../img/star_4.jpg) no-repeat center / contain;}
+.star5 {background: url(../img/star_5.jpg) no-repeat center / contain;}
+.rv_modify_delete {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 5px;
+    font-size: 15px;
+}
+.rv_modify_btn:hover,
+.rv_delete_btn:hover {
+    color: #008049;
+    cursor: pointer;
+}
+/*리뷰 수정하는 부분은 평소엔 display:none 이다가 "수정"버튼 누르면 block으로 */
+.rv_modify_box {
+    display: none;
+}
+.rv_modify {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fcffcb;
+}
+.rv_update_content_area {
+    width: 850px;
+}
+.rv_update_content {
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    margin: 5px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.rv_update_undo {
+    width: 150px;
+    display: flex;
+    gap: 10px;
+}
+.rv_btns {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(82, 81, 81);
+    color: #fff;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+}
+.rv_btns:hover {
+    background-color: #008049;
+    color: #fcffcb;
+}
+/*페이지네이션 파트!!!!!!!!!!!*/
+.pagination{
+    margin: 30px 0;
+    font-size: 15px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+/* **********************************예매/ 취소 안내 탭*********************** */
+.infos{
+    margin-top: 80px;
+}
+.infos_box{
+    display: flex;
+    margin: 30px 0 ;
+}
+.infos_title_sec{
+    width: 20%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 900;
+}
+.infos_left_sec{
+    width: 80%;
+    text-align: left;
+    font-size: 15px;
+    line-height: 30px;
+    color: #333;
+    border-bottom: 2px solid #008049;
+}
+.info_box5 div:last-child{
+    border-bottom: none;
+}
+.infos_table{
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+    color: #333;
+    border-collapse: collapse;
+}
+.infos_tb_content{
+    padding: 5px 0;
+    color: #333;
+    border:1px solid #ddd;
+}

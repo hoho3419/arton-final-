@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtOn</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/deal.css">
+    <link rel="icon" href="./img/최종_바비콘.png">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./js/deal.js"></script>
+</head>
+<style>
+   
+</style>
+<!-- 
+    공연날짜, 회차까지는 item_list 만들어서 파일하나에 저장해놓고 / 거기서 정보 불러오기?
+    공연고유번호로 공연 날짜 구조는 미리 append하고 공연 날짜마다 공연회차도 더콤마 옵션 선택처럼 동적으로 append ...
+    
+    잔여좌석은 디비에서 불러옴.
+    
+    ? 공연정보 이미지들 어떤건 할인정보 이미지도 따로 있고 그러는데 섹션을 다 나눠놔야하는지, 아님 공연정보 부분만 가져올건지
+    ? 
+ -->
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header_area">
+                <div class="logo"><a href="#"></a></div>
+                <ul class="menu_ul">
+                    <li>
+                        <a href="#">콘서트</a>
+                    </li>
+                    <li>
+                        <a href="#">뮤지컬</a>
+                    </li>
+                    <li>
+                        <a href="#">연극</a>
+                    </li>
+                    <li>
+                        <a href="#">클래식</a>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                    </li>
+                    <li>
+                        <a href="#">아동</a>
+                    </li>
+                </ul>
+                <div class="icon_list">
+                    <div class="search_area">
+                        <div class="search">
+                            <a href="#">
+                                <div class="search_bar">
+                                </div>
+                            </a>
+                        </div>
+                        <input id="srch_con" type="text" value="aaa">
+                    </div>
+                    <div class="icon_area">
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="rank_img"></div>
+                                <span class="text">랭킹</span>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="login_img"></div>
+                                <div class="text">로그인</div>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="my_img"></div>
+                                <div class="text">마이페이지</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="contents_area">
+                <!-- 상단이동 아이콘 삽입 -->
+                <img src="./img/상단이동icon.png" alt="" class="btn_gotop">
+                <!--공연제목-->
+                <div class="title_section">
+                    <div class="big_title">MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 / 특별초청재즈음악인 :
+                        키퍼]</div>
+                    <p class="item_txt">
+                        <span class="item_date">2022-12-01 2022-12-31</span>
+                        <span>
+                            <span>플러스씨어터 (구. 컬처스페이스 엔유)</span>
+                            <img src="./img/location_icon.png" alt="" class="location_icon">
+                        </span>
+                    </p>
+                </div>
+
+                <!--공연정보(포스터부분)-->
+                <div class="item_section">
+                    <!--왼쪽-->
+                    <div class="poster_box">
+                        <div class="img_box">
+                            <img src="./img/poster1.jpg" alt="">
+                        </div>
+                        <div class="like_box">
+                            <img src="./img/empty_heart.png" alt="" class="empty_heart">
+                            <img src="./img/full_heart.png" alt="" class="full_heart">
+                            <span class="likes_cnt">777</span>
+                            <span>Likes</span>
+                        </div>
+                    </div>
+                    <!--오른쪽-->
+                    <div class="info_box">
+                        <table class="item_table item_txt">
+                            <tbody>
+                                <tr>
+                                    <td class="item_sec_name">등급</td>
+                                    <td class="item_sec_body" id="contents_ratings">17세 이상 관람가 (2022년 기준 2006년생 포함 이전
+                                        출생자)</td>
+                                </tr>
+                                <tr>
+                                    <td class="item_sec_name">관람시간</td>
+                                    <td class="item_sec_body" id="running_time">매직라운지쇼 시간표 참고 (1체험당 30분)</td>
+                                </tr>
+                                <tr>
+                                    <td class="item_sec_name">출연</td>
+                                    <td class="item_sec_body" id="cast">박웅, 강찬, 김용석, 김찬종, 조현우, 문경초, 한선천, 이동수, 은가은, 윤진솔,
+                                        허윤혜, 금조, 최유찬, 최호승, 정인지, 조원석, 이진호, 박근렬, 이강호, 이진우</td>
+                                </tr>
+                                <tr>
+                                    <td class="item_sec_name">가격</td>
+                                    <td class="item_sec_body" id="price">
+                                        <div class="price_box">
+                                            <div class="seat">S석 <span class="seat_price green">150,000원</span></div>
+                                            <div class="seat">A석 <span class="seat_price green">100,000원</span></div>
+                                            <div class="seat">R석 <span class="seat_price green">70,000원</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="item_sec_name">헤택</td>
+                                    <td class="item_sec_body" id="discount_rate">제휴할인</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--예매하기섹션-->
+                <div class="booking_section">
+                    <div class="booking_process">
+                        <div class="choice_title">날짜선택</div>
+                        <div class="choice_title">회차선택</div>
+                        <div class="choice_title">남은 좌석수</div>
+                    </div>
+                    <div class="option_choice_sec">
+                        <div class="option_box" id="option_date">
+                            <!-- <label for="date1"><input type="radio" name="date" id="date1">2022-11-22</label>
+                            <label for="date2"><input type="radio" name="date" id="date2">2022-11-22</label> -->
+                            <button type="button" class="choice_btn show_date">2022-11-22</button>
+                            <button type="button" class="choice_btn show_date">2022-11-22</button>
+                        </div>
+                        <div class="option_box" id="option_time">
+                            <button type="button" class="choice_btn show_time">16 : 00</button>
+                            <button type="button" class="choice_btn show_time">18 : 00</button>
+                        </div>
+                        <div class="option_box">
+                            <div class="seat_stock"> 
+                                <div class="seat_ment">선택한 회차의 잔여석과 가격을<br>확인할 수 있어요!</div>
+                                <div class="seat_stock_box">
+                                    <div class="seat">S석 <span>150,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span></div>
+                                    <div class="seat">A석 <span>100,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span></div>
+                                    <div class="seat">R석 <span>70,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking_btn_sec">
+                        <button class="booking_btn">예매하기</button>
+                    </div>
+
+                </div>
+
+                <!-- 탭(공연상세,리뷰,예매안내) -->
+                <div class="datail_info_section">
+                    <ul class="tabs">
+                        <li class="tab_title tab_border_bot" data-tab="tab_per_notice">공연상세정보</li>
+                        <li class="tab_title" data-tab="tab_review">관람평</li>
+                        <li class="tab_title" data-tab="tab_book_info">예매/취소 안내</li>
+                    </ul>
+                    <!-- 공연상세 -->
+                    <div class="tab_content tab_current" id="tab_per_notice">
+                        <div class="small_title">공지사항</div>
+                        <div class="notice_ment">
+                            <p>※유의</p>
+                            <p>공연을 즐겁게 즐겨주세요!</p>
+                        </div>
+
+                        <div class="small_title">공연정보</div>
+                        <div class="long_img_box">
+                            <img src="./img/test_long_img.jpg" alt="" class="perfom_info_img">
+                            <img src="./img/test_long_img2.jpg" alt="" class="perfom_info_img">
+                            <img src="./img/test_long_img3.jpg" alt="" class="perfom_info_img">
+                            <img src="./img/test_long_img4.jpg" alt="" class="perfom_info_img">
+                            <img src="./img/test_long_img5.jpg" alt="" class="perfom_info_img">
+                        </div>
+
+                        <div class="small_title">기획사 정보</div>
+                        <table class="notice_table" id="organization_table">
+                            <colgroup>
+                                <col width=20%>
+                                <col width=*>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="table_title">기획사</th>
+                                    <td class="table_content">
+                                        주최/주관: <span>(주)에버모어엔터테인먼트</span>
+                                        <br>
+                                        제작: <span>(주)아이두이엔티</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="small_title">상품정보제공 고시</div>
+                        <table class="notice_table" id="info_notice_table">
+                            <colgroup>
+                                <col width=18%>
+                                <col width=32%>
+                                <col width=18%>
+                                <col width=32%>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="table_title">주최/기획</th>
+                                    <td class="table_content">(주)에버모어엔터테인먼트</td>
+                                    <th scope="row" class="table_title">소비자상담</th>
+                                    <td class="table_content">02.3461.5150</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="table_title">주연</th>
+                                    <td class="table_content">박웅, 강찬, 김용석, 김찬종, 조현우, 문경초, 한선천, 이동수, 은가은, 윤진솔,
+                                        허윤혜, 금조, 최유찬, 최호승, 정인지, 조원석, 이진호, 박근렬, 이강호, 이진우</td>
+                                    <th scope="row" class="table_title">관람등급</th>
+                                    <td class="table_content">17세 이상 관람가 (2022년 기준 2006년생 포함 이전
+                                        출생자)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="table_title">공연시간</th>
+                                    <td class="table_content">매직라운지쇼 시간표 참고 (1체험당 30분)</td>
+                                    <th scope="row" class="table_title">공연장소</th>
+                                    <td class="table_content">잠실체육관</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="table_title">취소/환불방법</th>
+                                    <td colspan=3 class="table_content">
+                                        <p>취소 일자에 따라 아래와 같이 취소수수료가 부과됩니다. 예매일보다 관람일 기준이 우선 적용되오니 유의해주시기 바랍니다.
+                                            <br>
+                                            단, 예매 후 7일 이내라도 취소시점이 공연일로부터 10일 이내라면 그에 해당하는 취소수수료가 부과됩니다.
+                                            <br>
+                                            (단, 상품에 따라 취소 정책이 달라질 수 있고, 각 공연이 공지하는 취소 정책이 우선 적용되므로, 예매 시 참고하시기 바랍니다.)
+                                        </p>
+                                        <div class="detail_info_box">
+                                            <table class="detail_info_table">
+                                                <colgroup>
+                                                    <col width=50%>
+                                                    <col width=50%>
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col" class="detail_tb_title">취소일</th>
+                                                        <th scope="col" class="detail_tb_title">취소수수료</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="detail_tb_content">예매 후 7일 이내</td>
+                                                        <td class="detail_tb_content">없음</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="detail_tb_content">예매 후 8일 ~ 관람일 10일 전까지</td>
+                                                        <td class="detail_tb_content">뮤지컬, 콘서트, 클래식 등: <span
+                                                                class="red">장당 4,000원</span> /
+                                                            <br>연극, 전시 등: <span class="red">장당 2,000원</span>(단, 티켓 금액의
+                                                            10% 이내)
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="detail_tb_content">관람일 9일 전 ~ 관람일 7일 전까지</td>
+                                                        <td class="detail_tb_content">티켓 금액의 10%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="detail_tb_content">관람일 6일 전 ~ 관람일 3일 전까지</td>
+                                                        <td class="detail_tb_content">티켓 금액의 20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="detail_tb_content">관람일 2일 전 ~ 취소마감일시까지</td>
+                                                        <td class="detail_tb_content">티켓 금액의 30%</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p>
+                                            예매수수료는 예매 당일 밤 12시 이전 취소 시에만 환불되며, 그 이후 기간에는 환불되지 않습니다.
+                                            <br>취소는 MY공연>예매확인/취소 에서 직접 취소 또는 고객센터(1544-0000)를 통해 취소 가능합니다.
+                                            <br>티켓이 배송된 후에는 PC/모바일 취소가 불가, 취소마감시간 이전에 예스24 고객센터로 티켓이 반송되어야 취소 가능합니다.
+                                            <br>(취소수수료는 티켓 도착일 기준으로 부과되며, 배송비는 환불되지 않습니다.)
+                                            <br>각 상품별로 취소 정책이 다르게 적용될 수 있으니, 각 상품 안내 사항을 확인해주시기 바랍니다.
+                                        </p>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 리뷰 -->
+                    <!-- form 태그는 어디서부터 어디까지 감싸야 하지..? -->
+                    <div class="tab_content" id="tab_review">
+                        <div class="review_area">
+                            <div class="left_line">
+                                <div class="star_rating_area">
+                                    <div class="star_rating">
+                                        <input type="radio" id="5-stars" name="rating" value="5" />
+                                        <label for="5-stars" class="star">★</label>
+                                        <input type="radio" id="4-stars" name="rating" value="4" />
+                                        <label for="4-stars" class="star">★</label>
+                                        <input type="radio" id="3-stars" name="rating" value="3" />
+                                        <label for="3-stars" class="star">★</label>
+                                        <input type="radio" id="2-stars" name="rating" value="2" />
+                                        <label for="2-stars" class="star">★</label>
+                                        <input type="radio" id="1-star" name="rating" value="1" />
+                                        <label for="1-star" class="star">★</label>
+                                    </div>
+                                    <div class="rating_score">별점(<span id="input_rating">0</span>/5)</div>
+                                </div>
+                                
+                                <!-- <form action="#" id="review_frm"> -->
+                                    <div class="review_upload_area">
+                                        <div class="review_content_area">
+                                            <textarea name="review_content" id="review_content" placeholder="내용을 작성해주세요.(최소 10자 / 최대 500자)" maxlength="500"></textarea>
+                                            <div class="text_counter_area"><span id ="text_counter">0</span>자/500자</div>
+                                        </div>
+                                        <button id="btn_submit_review">후기 등록하기</button>
+                                    </div>
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                        <div class="review_list_area">
+                            <!-- 리뷰에서 총 별점과 평균별점 보여주는 부분-->
+                            <div class="rv_list_top">
+                                <div class="rv_count_area">
+                                    <div class="rv_count_box">총 <span class="rv_count">0</span> 개 / </div>
+                                    <div class="rv_avg_box"> 평균별점 <span id="rv_avg">0</span></div>
+                                </div>
+                                <div class="rv_sort_area">
+                                    <div class="rv_sorting" id="rv_sort_curr">최신순</div>
+                                    <div class="rv_sorting" id="rv_sort_rate">평점순</div>
+                                </div>
+                            </div>
+                            <div class="review_list">
+                                <div class="rv_list_box">
+                                    <!--우리 아이디는 5~20 글자까지 받음 -->
+                                    <div class="rv_user_id">soy_4156</div>
+                                    <div class="rv_uploaded_box">
+                                        <div class="rv_uploaded" id="rv_upload_date">2022-11-11</div>
+                                        <div class="rv_uploaded" id="rv_uploaded_content">어쩌구 저쩌구 아주 훌룡한 공연 어쩌구 </div>
+                                    </div>
+                                    <div class="rv_right_box">
+                                        <div class="rv_star_rating star5"></div>
+                                        <div class="rv_modify_delete">
+                                            <div class="rv_modify_btn">수정</div> |
+                                            <div class="rv_delete_btn">삭제</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rv_modify_box">
+                                    <div class="rv_modify">
+                                        <div class="rv_user_id">soy_4156</div>
+                                        <div class="rv_update_content_area">
+                                            <textarea name="rv_update" class="rv_update_content" id="rv_update" maxlength="500" rows="4"></textarea>
+                                        </div>
+                                        <div class="rv_update_undo">
+                                            <button class="rv_btns update_btn">등록</button>
+                                            <button class="rv_btns undo_btn">취소</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- 페이지네이션 파트!!!!!!!!!!!!!!! -->
+                            <div class="pagination">
+                                <a href="" class="prevpage">[이전]</a>
+                                <a href="" class="page">1</a>
+                                <a href="" class="page">2</a>
+                                <a href="" class="page">3</a>
+                                <a href="" class="page">4</a>
+                                <a href="" class="page">5</a>
+                                <a href="" class="endpage">[다음]</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <!-- 안내 -->
+                    <div class="tab_content" id="tab_book_info">
+                        <div class="infos">
+                            <div class="infos_box info_box1">
+                                <div class="infos_title_sec">예매</div>
+                                <div class="infos_left_sec">
+                                    <p>예매는 PC, 모바일, 고객센터 를 통해 신용카드, 가상계좌(무통장 입금), arton머니, arton상품권, 예치금 등으로 예매하실 수 있습니다.
+                                        <br>(단, 상품마다 사용 가능한 결제 수단이 다르게 적용될 수 있으니 상품 상세페이지 안내 사항을 확인해주세요.)
+                                        <br>무통장입금 결제 선택 시 입금 마감시간은 예매일 익일 밤 11시 29분까지입니다. 입금 마감시간 내 미입금 된 경우 예매가 자동
+                                        취소됩니다.
+                                        <br>(단, 상품에 따라 예매 당일 밤 11시 29분에 마감되는 경우가 있으니 예매 전후 반드시 확인해주시기 바랍니다.)
+                                        <br>예매수수료는 다음과 같습니다.
+                                    </p>
+                                    <table class="infos_table">
+                                        <colgroup>
+                                            <col width=30%>
+                                            <col width=40%>
+                                            <col width=30%>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col" class="detail_tb_title">장르</th>
+                                                <th scope="col" class="detail_tb_title">pc / 모바일</th>
+                                                <th scope="col" class="detail_tb_title">전화예매</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="infos_tb_content">콘서트, 뮤지컬, 클래식, 국악, 무용</td>
+                                                <td class="infos_tb_content">장당 1,000원</td>
+                                                <td rowspan="3" class="infos_tb_content">장당 2,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="infos_tb_content">연극, 전시</td>
+                                                <td class="infos_tb_content">장당 500원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="infos_tb_content">체험, 행사</td>
+                                                <td class="infos_tb_content">장당 500원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="infos_box info_box2">
+                                <div class="infos_title_sec">티켓수령방법</div>
+                                <div class="infos_left_sec">
+                                    <p>
+                                        <span><b>현장수령</b></span>
+                                        <br>티켓은 예매자 본인 수령이 기본 원칙입니다.
+                                        <br>공연 당일 예매확인서와 예매자의 신분증 을 지참하신 후 공연장 매표소에서 티켓을 수령하시면 됩니다.
+                                    </p>
+                                    <p>
+                                        <span><b>배송</b></span>
+                                        <br>배송을 선택하신 경우 예매완료(결제익일) 기준 5~7일 이내에 예매 시 입력하신 주소로 배송됩니다.(영업일 기준)
+                                        <br>일괄배송의 경우 각 상품의 지정된 배송일자 기준으로 배송이 시작됩니다. 배송 시작일은 상세정보 및 예매공지사항에서 확인할 수 있습니다.
+                                        <br>지역 및 배송 서비스 사정에 따라 배송사가 변경될 수 있으며, 배송일이 추가적으로 소요될 수 있습니다.(CJ대한통운, 우체국 외 1개
+                                        업체)
+                                        <br>* 티켓 수령과 관련된 정책은 상품별로 상이하니 자세한 내용은 각 상품 상세정보에서 확인 부탁드립니다.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div class="infos_box info_box3">
+                                <div class="infos_title_sec">취소 마감시간</div>
+                                <div class="infos_left_sec">
+                                    <table class="infos_table">
+                                        <colgroup>
+                                            <col width="40%">
+                                            <col width="41%">
+                                            <col width="19%">
+                                        </colgroup>
+                                        <tr>
+                                            <th scope="col" class="detail_tb_title">공연 관람일</th>
+                                            <th scope="col" class="detail_tb_title">취소 마감일</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">화요일~토요일</td>
+                                            <td class="infos_tb_content">관람일 전일 평일 오후 5시</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">일요일 ~ 월요일</td>
+                                            <td class="infos_tb_content">토요일 오전 11시</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">공휴일 및 공휴일 익일</td>
+                                            <td class="infos_tb_content">
+                                                공휴일 전일이 평일인 경우 - 오후 5시
+                                                <br>공휴일 전일이 토요일, 일요일인 경우 - 토요일 오전 11시
+                                                <br><span class="red">공휴일에는 예매 취소 불가</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <p>
+                                        관람일 당일 예매하신 건은 취소, 변경, 환불 불가합니다.
+                                        <br>배송이 시작된 티켓의 경우 티켓이 아트온 공연 고객센터로 취소마감시간 이전까지 반송되어야 취소 가능합니다.(취소수수료는 도착일 기준으로
+                                        부과됩니다.)
+                                        <br>결제수단을 복수로 선택한 경우 인터넷으로 부분취소가 불가하오니, 고객센터로 문의해주시기 바랍니다.
+                                    </p>
+                                    <p class="red">
+                                        ※일부 공연에 한해, 취소 마감 정책이 달라질 수 있습니다.
+                                        <br>각 상품 상세페이지에 안내되어 있는 취소 정책이 우선 적용되오니, 반드시 예매 전 확인해주시기 바랍니다.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="infos_box info_box4">
+                                <div class="infos_title_sec">취소 수수료</div>
+                                <div class="infos_left_sec">
+                                    <table class="infos_table">
+                                        <colgroup>
+                                            <col width="40%">
+                                            <col width="60%">
+                                        </colgroup>
+                                        <tr>
+                                            <th scope="col" class="detail_tb_title">취소일</th>
+                                            <th scope="col" class="detail_tb_title">취소 수수료</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">예매 후 7일 이내</td>
+                                            <td class="infos_tb_content">없음</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">예매 후 8일 ~ 관람일 10일 전까지</td>
+                                            <td class="infos_tb_content">뮤지컬, 콘서트, 클래식 : 장당 4,000원 / 연극, 전시 : 장당
+                                                2,000원(단, 티켓 금액의 10% 이내)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">관람일 9일 전 ~ 관람일 7일 전까지</td>
+                                            <td class="infos_tb_content">티켓 금액의 10%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">관람일 6일 전 ~ 관람일 3일 전까지</td>
+                                            <td class="infos_tb_content">티켓 금액의 20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">관람일 2일 전 ~ 취소마감일시까지</td>
+                                            <td class="infos_tb_content">티켓 금액의 30%</td>
+                                        </tr>
+                                    </table>
+                                    <p>
+                                        예매 후 7일 이내라도 취소시점이 관람일로부터 10일 이내라면 그에 해당하는 취소수수료가 부과됩니다.
+                                        <br>관람일 당일 취소 가능한 상품의 경우 관람일 당일 취소 시 티켓금액의 90%가 부과됩니다.
+                                        <br><span class="red">상품의 특성에 따라 취소수수료 정책이 달라질 수 있습니다.(각 상품 예매 시 취소수수료
+                                            확인)</span>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="infos_box info_box5">
+                                <div class="infos_title_sec">환불</div>
+                                <div class="infos_left_sec">
+                                    <p>예매수수료는 예매 당일 밤 12시 이전까지 환불되며, 그 이후 기간에는 환불되지 않습니다.
+                                        <br>배송 및 반송처리 된 티켓의 배송비는 환불되지 않습니다.
+                                    </p>
+                                    <table class="infos_table">
+                                        <colgroup>
+                                            <col width="20%">
+                                            <col width="80%">
+                                        </colgroup>
+                                        <tr>
+                                            <th scope="col" class="detail_tb_title">결제 수단</th>
+                                            <th scope="col" class="detail_tb_title">환불 안내</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">신용카드</td>
+                                            <td class="infos_tb_content">
+                                                <p>일반적으로 취소완료 되고 4~5일(토, 공휴일 제외) 후 카드 승인 취소가 확인됩니다.
+                                                    <br>취소시점에 따라 취소수수료와 예매수수료, 배송 받으신 경우 배송비를 제외한 금액만큼 환불 처리 됩니다.
+                                                    <br>(부분 취소 시에는 잔여 티켓 금액 + 수수료 등을 제외하고 환불 처리 됩니다.)
+                                                    <br>각 카드사의 취소 정책에 따라 승인취소 및 환급일에 차이가 있을 수 있습니다.
+                                                    <br>자세한 사항은 카드사로 문의 바랍니다.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="infos_tb_content">무통장입금</td>
+                                            <td class="infos_tb_content">
+                                                <p>예매 취소 시 반드시 환불 받으실 계좌번호와 은행명을 입력하세요.
+                                                    <br>취소수수료,예매수수료와 배송 받으신 경우 배송비를 제외한 후 환불 처리됩니다.
+                                                    <br>취소 후 환불 처리는 영업일 기준 3~5일 정도 소요됩니다.
+                                                    <br>환불진행상태는 마이페이지>예매확인/취소 상세내역에서 확인할 수 있습니다.
+                                                </p>
+
+                                                <p class="red">
+                                                    * 배송 받은 티켓의 취소를 위해 고객센터로 발송하실 때, 환불 받으실 계좌 정보를 기입하여 보내주시면 보다 빠른 환불
+                                                    처리가 가능합니다.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="contents_area">
+                <a href="#"><div class="f_logo">아트온 로고</div></a>
+                <div class="f_desc">
+                    <p class="f_title">아트온</p>
+                    <p>서울특별시 강남구 서초동 서울로 1길 1 대표 아트온</p>
+                    <p>사업자 등록번호: 1001-1314-15444 / 통신판매번호: 제 2002-00000호</p>
+                    <p>Copyright YM_ARTON INC.ALL Rights Reserved</p>
+                </div>
+                <div class="cst_num">
+                    <img src="./img/call.png" alt="">
+                    <span>고객센터</span>
+                    <p class="f_number">1544-0000</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

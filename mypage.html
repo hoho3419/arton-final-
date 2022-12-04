@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtOn</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/mypage.css">
+    <link rel="icon" href="./img/최종_바비콘.png">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./js/mypage.js"></script>
+    <script src="./js/h_f.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header_area">
+                <div class="logo"><a href="#"></a></div>
+                <ul class="menu_ul">
+                    <li>
+                        <a href="#">콘서트</a>
+                    </li>
+                    <li>
+                        <a href="#">뮤지컬</a>
+                    </li>
+                    <li>
+                        <a href="#">연극</a>
+                    </li>
+                    <li>
+                        <a href="#">클래식</a>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                    </li>
+                    <li>
+                        <a href="#">아동</a>
+                    </li>
+                </ul>
+                <div class="icon_list">
+                    <div class="search_area">
+                        <div class="search">
+                            <a href="#">
+                                <div class="search_bar">
+                                </div>
+                            </a>
+                        </div>
+                        <input id="srch_con" type="text" value="aaa">
+                    </div>
+                    <div class="icon_area">
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="rank_img"></div>
+                                <span class="text">랭킹</span>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="login_img"></div>
+                                <div class="text">로그인</div>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="my_img"></div>
+                                <div class="text">마이페이지</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </header>
+        <main class="main">
+                <div class="contents_area">
+                    <ul class="mytabs">
+                        <li class="mytabs_li" data-tab="mytab_mypage">마이페이지
+                            <span></span>
+                        </li>
+                        <li class="mytabs_li" data-tab="mytab_tit_chk">예매확인/취소
+                            <span></span>
+                        </li>
+                        <li class="mytabs_li" data-tab="mytab_likes">찜목록
+                            <span></span>
+                        </li>
+                    </ul>
+                    <div class="mypage_tab userinfo_section tab_curr" id="mytab_mypage">
+                        <div class="myinfo_box">
+                            <img src="./img/person_icon_black.png" alt="">
+                            <div class="user_name">unknown</div>
+                            <a href="#"><button class="user_info_btn">회원정보</button></a>
+                        </div>
+
+                        <div class="myticket_box">
+                            <div class="box_top">
+                                <div class="box_name">예매확인/취소</div>
+                                <div class="more_btn mytit_more_btn">더보기></div>
+                            </div>
+                            <div class="mytit_list">
+                                <table class="mytit_list_table tab1">
+                                    <colgroup>
+                                        <col width=20%>
+                                        <col width=40%>
+                                        <col width=25%>
+                                        <col width=15%>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">예매일</th>
+                                            <th scope="col">공연정보</th>
+                                            <th scope="col">예매정보</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="mytit_list_tbody">
+                                        <tr>
+                                            <td class="buy_date">2022.12.01</td>
+                                        
+                                            <td class="per_info">
+                                                <div class="thumb_img">
+                                                    <a href="">
+                                                        <img src="./img/poster1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="info_text">
+                                                    <div class="perf_title">MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 / 특별초청재즈음악인 : 키퍼]</div>
+                                                    <div class="perf_date">2022.10.13 ~ 2023.03.12</div>
+                                                    <div class="perf_spot">안녕 인사동 B1 인사센트럴뮤지엄</div>
+                                                </div>
+                                            </td>
+                                       
+                                            <td class="booking_info">
+                                                <div class="b_i_titles">
+                                                    <div>예약번호</div>
+                                                    <div>관람일</div>
+                                                    <div>매수</div>
+                                                </div>
+                                                <div class="b_i_content">
+                                                    <div class="green">M221467118</div>
+                                                    <div>상시</div>
+                                                    <div>1매</div>
+                                                </div>
+                                            </td>
+                                        
+                                            <td class="status">예매완료(입금완료)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mylikes_box">
+                            <div class="box_top">
+                                <div class="box_name">찜목록</div>
+                                <div class="more_btn mylikes_more_btn">더보기></div>
+                            </div>
+                            <div class="mylikes_list" id="likes">
+                                <div class="mylikes">
+                                    <div class="mylikes_content">
+                                        <img src="./img/poster2.jpg" alt="">
+                                        <div class="my_perf_name">MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 / 특별초청재즈음악인 : 키퍼]</div>
+                                        <a href="#"><button class="my_gobook_btn">예매하러가기></button></a>
+                                    </div> 
+                                </div>
+                                <div class="mylikes">
+                                    <div class="mylikes_content">
+                                        <img src="./img/poster3.jpg" alt="">
+                                        <div class="my_perf_name">MOONCHILD</div>
+                                    <a href="#"><button class="my_gobook_btn">예매하러가기></button></a>
+                                    </div>
+                                </div>
+                                <div class="mylikes">
+                                    <div class="mylikes_content">
+                                        <img src="./img/poster4.jpg" alt="">
+                                        <div class="my_perf_name">MOONCHILD</div>
+                                    <a href="#"><button class="my_gobook_btn">예매하러가기></button></a>
+                                    </div>
+                                </div>
+                                <div class="mylikes">
+                                    <div class="mylikes_content">
+                                        <img src="./img/poster5.jpg" alt="">
+                                        <div class="my_perf_name">MOONCHILD</div>
+                                    <a href="#"><button class="my_gobook_btn">예매하러가기></button></a>
+                                    </div>
+                                </div>
+                                <div class="mylikes">
+                                    <div class="mylikes_content">
+                                        <img src="./img/poster6.jpg" alt="">
+                                        <div class="my_perf_name">MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 / 특별초청재즈음악인 : 키퍼]</div>
+                                        <a href="#"><button class="my_gobook_btn">예매하러가기></button></a>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mypage_tab myticket_chk_section" id="mytab_tit_chk">
+                        <div class="sort_btn_area">
+                            <div class="sort_btn_box">
+                                <button type="button" class="my_sort_btn" id="reserv_chk">예매확인</button>
+                                <button type="button" class="my_sort_btn" id="reserv_cancel">예매취소</button>
+                            </div>
+                        </div>
+                        <div class="reference">
+                            <div class="month_btn click_event"><a herf=""><span>3개월</span></a></div>
+                            <div class="month_btn"><a herf=""><span>6개월</span></a></div>
+                            <div class="month_btn"><a herf=""><span>12개월</span></a></div>
+                        </div>
+                        <div class="mytit_chk_area">
+                            <table class="mytit_list_table">
+                                <colgroup>
+                                    <col width=20%>
+                                    <col width=40%>
+                                    <col width=25%>
+                                    <col width=15%>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">예매일</th>
+                                        <th scope="col">공연정보</th>
+                                        <th scope="col">예매정보</th>
+                                        <th scope="col">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="mytit_list_tbody tab2">
+                                    <tr>
+                                        <td class="buy_date">2022.12.01</td>
+                                    
+                                        <td class="per_info">
+                                            <div class="thumb_img">
+                                                <a href="">
+                                                    <img src="./img/poster1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="info_text">
+                                                <div class="perf_title">MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 / 특별초청재즈음악인 : 키퍼]</div>
+                                                <div class="perf_date">2022.10.13 ~ 2023.03.12</div>
+                                                <div class="perf_spot">안녕 인사동 B1 인사센트럴뮤지엄</div>
+                                            </div>
+                                        </td>
+                                   
+                                        <td class="booking_info">
+                                            <div class="b_i_titles">
+                                                <div>예약번호</div>
+                                                <div>관람일</div>
+                                                <div>매수</div>
+                                            </div>
+                                            <div class="b_i_content">
+                                                <div class="green">M221467118</div>
+                                                <div>상시</div>
+                                                <div>1매</div>
+                                            </div>
+                                        </td>
+                                    
+                                        <td class="status">예매완료(입금완료)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="mytit_null_box">
+                                <span></span>내역이 없습니다.
+                            </div>
+                            <div class="pagination">
+                                <a href="" class="prevpage">[이전]</a>
+                                <a href="" class="page">1</a>
+                                <a href="" class="page">2</a>
+                                <a href="" class="page">3</a>
+                                <a href="" class="page">4</a>
+                                <a href="" class="page">5</a>
+                                <a href="" class="endpage">[다음]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mypage_tab mylikes_section" id="mytab_likes">
+                        <div class="likes_title">찜목록</div>
+                        <div class="mylikes_list" id="likes_more">
+                            <div class="mylikes">
+                                <div class="mylikes_content">
+                                    <img src="./img/poster2.jpg" alt="">
+                                    <div class="my_perf_name">MOONCHILD Live In Seoul w/ Special Guest : KIEFER [문차일드 서울라이브공연 / 특별초청재즈음악인 : 키퍼]</div>
+                                    <a href=""><button class="my_gobook_btn">예매하러가기></button></a>
+                                </div> 
+                            </div> 
+                        </div>
+
+                    </div>
+
+                </div>
+        </main>
+        <footer class="footer">
+            <div class="contents_area">
+                <a href="#"><div class="f_logo">아트온 로고</div></a>
+                <div class="f_desc">
+                    <p class="f_title">아트온</p>
+                    <p>서울특별시 강남구 서초동 서울로 1길 1 대표 아트온</p>
+                    <p>사업자 등록번호: 1001-1314-15444 / 통신판매번호: 제 2002-00000호</p>
+                    <p>Copyright YM_ARTON INC.ALL Rights Reserved</p>
+                </div>
+                <div class="cst_num">
+                    <img src="./img/call.png" alt="">
+                    <span>고객센터</span>
+                    <p class="f_number">1544-0000</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

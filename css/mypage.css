@@ -1,0 +1,298 @@
+.mytabs{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 2px solid #ccc;
+}
+.mytabs_li{
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+    text-align: center;
+}
+.mytabs_li span{
+    display: block;
+    background: #008049;
+    width: 0;
+    height: 5px;
+    position: absolute; 
+    top: 40px;
+    left: 0;
+}
+.mytabs_li:hover{
+    cursor: pointer;
+    color:#008049;
+}
+.mytabs_li:hover span{
+    transition: all 0.3S;
+    width: 100%;
+}
+.mypage_tab{
+    display: none;
+}
+.tab_curr{
+    display: block;
+}
+.tab_event{
+    border-bottom: 5px solid #008049;
+}
+/*****회원정보섹션 - 사람아이콘 보여지는 부분****/
+.myinfo_box{
+    width: 100%;
+    height: 200px;
+    margin: 50px 0;
+    border: 3px solid #008049;
+    position: relative;
+}
+.myinfo_box img{
+    width: 170px;
+    position: absolute;
+    left: 33%;
+    top:50%;
+    transform: translateY(-50%);
+}
+.user_name{
+    font-size: 30px;
+    font-weight: 900;
+    color: #333;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+}
+.user_info_btn{
+    width: 160px;
+    height: 40px;
+    background-color: rgb(104, 103, 103);
+    color: #fff;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+}
+/******마이페이지 예매확인/취소 & 찜목록*******/
+.box_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.box_name{
+    font-size: 25px;
+    font-weight: 900;
+}
+.more_btn:hover{
+    cursor: pointer;
+}
+.mytit_list_table{
+    width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.mytit_list_table thead{
+    border-top: 2px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.mytit_list_table thead tr th{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(81, 81, 81);
+}
+.mytit_list_tbody{
+    width: 100%;
+    color:rgb(81, 81, 81);
+    font-size: 15px;
+}
+.mytit_list_tbody td{
+    padding: 20px 0;
+}
+.mytit_list_tbody tr{
+    border-bottom: 1px solid #ccc;
+}
+.buy_date{
+    text-align: center;
+    margin-top: 20px;
+}
+.thumb_img a img{
+    width: 90px;
+    height: 127px;
+}
+.per_info{
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+.perf_title{
+    margin: 10px 0 20px 0;
+}
+.booking_info{
+    position: relative;
+}
+.booking_info div{
+    padding: 5px 0;
+}
+.b_i_titles{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.b_i_content{
+    position: absolute;
+    top: 10%;
+    left:40%;
+}
+.status{
+    font-size: 18px;
+    font-weight: bold;
+    color:#333;
+}
+/********************찜목록!!!!******************************/
+.mylikes_box{
+    margin-top: 70px;   
+}
+.mylikes_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    background-color: #fafafa;
+}
+.mylikes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% / 5);
+    text-align: center;
+}
+.mylikes_content{
+    width: 200px;
+    height: 100%; 
+    position: relative;  
+}
+.mylikes_content img{
+    margin-top: 20px;
+    width: 100%;
+}
+.my_perf_name{
+    width: 200px;
+    margin: 5px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.my_gobook_btn{
+    width: 130px;
+    height: 40px;
+    margin: 5px 0;
+    background-color: #008049;
+    color:#fcffcb;
+    border-style: none;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+}
+/*********************예매확인/취소 탭!******************************/
+.sort_btn_area{
+    width: 100%;
+    margin : 50px 0;
+}
+.sort_btn_box{
+    width: 500px;
+    height: 50px;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.my_sort_btn{
+    width: 280px;
+    height: 50px;
+    border: 2px solid;
+    background-color: #fff;
+    border-radius: 30px;
+    font-size: 20px;
+    color: rgb(140, 140, 140);
+
+}
+#reserv_chk{
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+#reserv_cancel{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.zindex{
+    z-index: 999;
+    color:#008049;
+}
+/****개월별로 예매리스트 솔팅해주는 버튼들***/
+.reference{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.month_btn{
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #cfcdcd;;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+}
+.month_btn:hover{
+    cursor: pointer;
+    background-color:#b0b0b0;
+    text-align: center;
+}
+.click_event{
+    background-color: #b0b0b0;
+}
+.mytit_null_box{
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    display: none;
+}
+/*****페이지네이션*******/
+.pagination{
+    margin: 30px 0;
+    font-size: 15px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+/*****************찜목록*****************************/
+.likes_title{
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    margin: 50px auto;
+    border: 2px solid;
+    background-color: #fff;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #008049;
+    text-align: center;
+}
