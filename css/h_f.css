@@ -56,7 +56,7 @@
     z-index: 999999;
 }
 .contents_area{ 
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;   

@@ -11,27 +11,25 @@
     display: none;
 }
 .main_banner {
-
     max-width: 1410px;
     min-width: 1300px;
     overflow: hidden;
     margin: 0 auto;
     height: 500px;
-
+    position: relative;
 }
 .banner_box{
     display: flex;
     width: 100%;
     height: 100%;
     position: relative;
-    margin-left: 40px;
+    margin-left: 53px;
 }
 .banner {
     margin-top: 50px;
     cursor: pointer;
     position: absolute;
     top: 0;
-
 }
 .banner img{
     width: 365px;
@@ -42,7 +40,7 @@
     width: 50px;
     height: 60px;
     position: absolute;
-    top: 280px;
+    top: 227px;
     z-index: 99;
     cursor: pointer;
 }
@@ -137,6 +135,8 @@
     height: 650px;
     display: flex;
     justify-content: space-around;
+    max-width: 1520px;
+    margin: auto;
 }
 .ranking{
     width: 478px;
