@@ -390,11 +390,16 @@
     justify-content: center;
     align-items: center;
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
+    padding: 0 5px ;
+    box-sizing: border-box;
     text-overflow: ellipsis;
     transition: .2s;
     overflow: hidden;
+}
+.msg_txt{
+    width: 90%;
 }
 .picks_per_pla{
     font-style: italic;
@@ -417,10 +422,10 @@
 }
 /*텍스트 라인 넘치지 않게 하는 용 */
 .picks_txt div{
-    max-width: 216px;
-    max-height: 50px;
+    width: 216px;
+    height: 33px;
     text-overflow: ellipsis;
-    white-space: normal;
+    white-space: nowrap;
     overflow: hidden;
 }
 .picks_per_name{
