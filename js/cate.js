@@ -176,5 +176,62 @@ $('.banner >a> img').eq(1).prop('class','on');
         }, timer);
     }
 })
+/* *************************** url ***************************** */ 
+
+/* cate.html?cate=0 으로 들어오면 -> cate_item_list의 [0][0~8] 불러옴*/ 
+function get_url_info(key) {
+    console.log(key);
+    let curr = location.href;
+    curr = curr.split('?');
+    console.log(curr);
+    if (curr.length > 1) {
+        let tmp = curr[1].split('=');
+        if (tmp[0] == key) {
+            return tmp[1]; 
+        }
+        console.log(tmp[1]);
+        return 0;
+    }
+}
+let curr_cate = get_url_info('cate'); //cate로 들어가는 주소 불러오기
+// concert
+if(curr_cate == 0){
+    load_list(0, 8)
+  }
+// musical
+else if(curr_cate == 1){
+    load_list(1, 8)
+  }
+// play
+else if(curr_cate == 2){
+    load_list(2, 8)
+  }
+
+function load_list(idx, show_qty){ // idx = 배열에 접근하는 숫자, show_qty = 총 갯수
+    let rs = ITEM_LIST[idx];
+    for(let i =0; i < show_qty; i++){
+        let list = `<li class="picks_box">
+        <a href="">
+            <div class="picks_body">
+                <div class="picks_sec">
+                    <div class="picks_img_box">
+                        <img src="${rs[i].src}" alt="">
+                    </div>
+                    <div class="msg_box">
+                        <div class="msg_txt">${rs[i].desc}</div>
+                    </div>
+                </div>
+                <div class="picks_txt">
+                    <div class="picks_per_name">${rs[i].title}</div>
+                    <div class="picks_per_pla">${rs[i].place}</div>
+                </div>
+            </div>
+        </a>
+    </li>`
+    $('.picks_list').append(list);
+    }
+}
+
+
 
 
