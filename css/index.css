@@ -1,5 +1,6 @@
 .main{
-    width: 100%;
+    max-width: 1920px;
+    margin: auto;
     margin-top: 50px;
 }
 /* 체크 되어 있을때 색깔 들어오는 클래스 */
