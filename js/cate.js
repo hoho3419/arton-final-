@@ -207,11 +207,11 @@ $(document).ready(function () {
         }, timer);
     }
 })
-<<<<<<< Updated upstream
-=======
+
 /* *************************** url ***************************** */
 
 /* cate.html?cate=0 으로 들어오면 -> cate_item_list의 [0][0~8] 불러옴*/
+
 function get_url_info(key) {
     console.log(key);
     let curr = location.href;
@@ -220,7 +220,9 @@ function get_url_info(key) {
     if (curr.length > 1) {
         let tmp = curr[1].split('=');
         if (tmp[0] == key) {
+
             return tmp[1];
+
         }
         console.log(tmp[1]);
         return 0;
@@ -228,6 +230,7 @@ function get_url_info(key) {
 }
 let curr_cate = get_url_info('cate'); //cate로 들어가는 주소 불러오기
 // concert
+
 if (curr_cate == 0) {
     load_list(0, 8)
 }
@@ -243,6 +246,7 @@ else if (curr_cate == 2) {
 function load_list(idx, show_qty) { // idx = 배열에 접근하는 숫자, show_qty = 총 갯수
     let rs = ITEM_LIST[idx];
     for (let i = 0; i < show_qty; i++) {
+
         let list = `<li class="picks_box">
         <a href="">
             <div class="picks_body">
@@ -261,11 +265,12 @@ function load_list(idx, show_qty) { // idx = 배열에 접근하는 숫자, show
             </div>
         </a>
     </li>`
+
         $('.picks_list').append(list);
+
     }
 }
 
 
->>>>>>> Stashed changes
 
 

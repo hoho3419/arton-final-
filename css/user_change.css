@@ -1,0 +1,100 @@
+.u_title{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 50px 0;
+    text-align: center;
+}
+.u_table{
+    width: 960px;
+    margin: 0 auto;
+    border-collapse:collapse;
+    border: 2px solid #008049;
+    
+}
+td:nth-child(1),
+td:nth-child(2){
+    border-top: 1px solid #d6d6d6; 
+}
+td{
+    border-bottom: 1px solid #d6d6d6;
+    padding-left: 15px;
+}
+.u_change_title{
+    background-color: #fafafa;
+    color:#333;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 25px 0;
+    text-align: center;
+}
+.u_change_title:nth-last-of-type(1){
+    border-radius: 10px 0 0 0;
+}
+.u_change_title:nth-last-child(){
+    border-radius: 0 0 0 10px;
+}
+.u_change_body{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+}
+input[type="text"],
+input[type="tel"]{
+    width: 200px;
+    line-height: 30px;
+    margin: 10px 0;
+    outline: none;
+    border: solid 1px #ebebeb;
+    border-top-color: #d8d8d8;
+    border-left-color: #d8d8d8;
+    border-radius: 3px;
+    background-color: #fff;
+}
+#pw_ch_btn{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: #2b8860;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+}
+#pw_ch_btn:hover{
+    background-color: #008049;
+}
+#btn_submit{
+    width: 200px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 20px 0;
+    background-color: #2b8860;
+    color:#fff;
+    border: none;
+    border-radius: 5px;
+}
+#btn_submit:hover{
+    background-color: #008049;
+}
+.u_msg{
+    font-size: 13px;
+    font-weight: 500;
+    color: red;
+}
+.ad_ment{
+    font-size: 13px;
+    color: #373737;
+    font-weight: 500;
+}
+/* .ex{
+    display: inline;
+    font-size: 13px;
+    color: #616161;
+    font-weight: 300;
+} */

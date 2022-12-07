@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/user_change.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/h_f.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header_area">
+                <div class="logo"><a href="#"></a></div>
+                <ul class="menu_ul">
+                    <li>
+                        <a href="#">콘서트</a>
+                    </li>
+                    <li>
+                        <a href="#">뮤지컬</a>
+                    </li>
+                    <li>
+                        <a href="#">연극</a>
+                    </li>
+                    <li>
+                        <a href="#">클래식</a>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                    </li>
+                    <li>
+                        <a href="#">아동</a>
+                    </li>
+                </ul>
+                <div class="icon_list">
+                    <div class="search_area">
+                        <div class="search">
+                            <a href="#">
+                                <div class="search_bar">
+                                </div>
+                            </a>
+                        </div>
+                        <input id="srch_con" type="text" value="aaa">
+                    </div>
+                    <div class="icon_area">
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="rank_img"></div>
+                                <span class="text">랭킹</span>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="login_img"></div>
+                                <div class="text">로그인</div>
+                            </a>
+                        </div>
+                        <div class="icon_sec">
+                            <a href="#">
+                                <div class="my_img"></div>
+                                <div class="text">마이페이지</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <form action="#" class="user_change" autocomplete="off" onsubmit="return form_chk(this);">
+            <div class="u_title">회원정보</div>
+            <table class="u_table">
+                <colgroup>
+                    <col width="25%">
+                    <col width="75%">
+                </colgroup>
+                <tbody>
+                    <tr class="u_tr">
+                        <td class="u_change_title">아이디</td>
+                        <td class="u_change_body">
+                            <div id="u_real_id">dlrudal</div>
+                        </td>
+                    </tr>
+
+                    <tr class="u_tr">
+                        <td class="u_change_title">이름</td>
+                        <td class="u_change_body">
+                            <div id="u_real_name">이경미</div>
+                            <input type="text" placeholder="새로운 이름 입력" id="u_new_name" onfocus="focus_chk('u_new_name');" name="u_new_name" tabindex="0">
+                            <div class="u_msg" id="u_msg_new_name"></div>
+                        </td>
+                    </tr>
+
+                    <tr class="u_tr">
+                        <td class="u_change_title">생년월일</td>
+                        <td class="u_change_body">
+                            <div id="u_birth">19971216</div>
+                        </td>
+                    </tr>
+
+                    <tr class="u_tr">
+                        <td class="u_change_title">성별</td>
+                        <td class="u_change_body">
+                            <div id="u_gender">선택안함</div>
+                        </td>
+                    </tr>
+
+                    <tr class="u_tr">
+                        <td class="u_change_title">비밀번호 변경</td>
+                        <td class="u_change_body">
+                            <button id="pw_ch_btn">비밀번호 변경</button>
+                        </td>
+                    </tr>
+
+                    <tr class="u_tr">
+                        <td class="u_change_title">이메일</td>
+                        <td class="u_change_body">
+                                <div id="u_real_email">soy_4156@naver.com</div>
+                                <input type="text" placeholder="새로운 이메일주소 입력" id="new_email" name="new_email" onfocus=" focus_chk('new_email');" tabindex="0">
+                                <div class="u_msg" id="u_msg_new_email"></div>
+                        </td>
+                    </tr>
+
+                    <tr class="u_tr">
+                        <td class="u_change_title">휴대전화 번호</td>
+                        <td class="u_change_body">
+                            <div id="u_real_phone">01000000000</div>
+                            <input type="tel" id="u_new_phone" onfocus="focus_chk('u_new_phone');" name="u_new_phone" tabindex="0" placeholder="새로운 휴대전화번호 입력" maxlength="11">
+                            <div class="u_msg" id="u_msg_new_phone"></div>
+                        </td>
+                    </tr>
+
+                    <tr class="u_tr">
+                        <td class="u_change_title">광고 수신동의</td>
+                        <td class="u_change_body">
+                            <span class="ad_ment">아트온에서 제공하는 이벤트/혜택 등 다양한 정보를 이메일로 받아보실 수 있습니다. 일부 서비스(별도 회원 체계로 운영하거나 아트온 가입 이후 추가 가입하여 이용하는 서비스 등)의 경우, 개별 서비스에 대해 별도 수신 동의를 받을 수 있으며, 이때에도 수신 동의에 대해 별도로 안내하고 동의를 받습니다 (선택) </span>
+                            <br>
+                            <br>
+                            <input type="radio" class="txt" id="agree" name="promo_btn" value="1"> 
+                            <label for="agree">
+                                수신동의
+                            </label>
+                            <input type="radio" class="txt" id="disagree" name="promo_btn" value="0">
+                            <label for="disagree">
+                                수신거부
+                            </label>
+                            
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <button type="submit" id="btn_submit">회원정보 수정</button>
+        </form>
+    </div>
+    <script src="./js/user_change.js"></script>
+    <footer class="footer">
+            <div class="contents_area">
+                <div class="f_logo"></div>
+                <div class="f_desc">
+                    <p class="f_title">아트온</p >
+                    <p>서울특별시 강남구 서초동 서울로 1길 1 대표 아트온</p>
+                    <p>사업자 등록번호: 1001-1314-15444 / 통신판매번호: 제 2002-00000호</p>
+                    <p>Copyright YM_ARTON INC.ALL Rights Reserved</p>
+                </div>
+                <div class="cst_num">
+                    <img src="./img/call.png" alt="">
+                    <span>고객센터</span>
+                    <p class="f_number">1544-0000</p>
+                </div>
+            </div>
+    </footer>
+
+</body>
+</html>

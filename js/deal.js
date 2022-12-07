@@ -301,12 +301,12 @@ $(document).ready(function(){
     // $('.update_btn').click(function(){
     $(document).on('click','.update_btn',function(){
         // let reupload = $(this).parents('.rv_update_content').text().trim();
-        let reupload = $(this).parent().prev().children('.rv_update_content').val();
+        let reupload = $(this).parent().prev().children('.rv_update_content').val().trim();
         console.log(reupload);
-        $(this).parents('.rv_modify_box').prev('.rv_list_box').children('.rv_uploaded_box').children('#rv_uploaded_content').text(reupload).trim();
-
-        
+        $(this).parents('.rv_modify_box').prev('.rv_list_box').children('.rv_uploaded_box').children('#rv_uploaded_content').text(reupload);
         //등록 버튼 누르면, 수정된 리뷰 잡는 것까지 됨. 이걸 디비에 저장하고 다시 리스트를 리로드 하면 된다.
+
+
         let rv_box = $(this).parents('.rv_modify_box').prev('.rv_list_box');
         let md_box = rv_box.next('.rv_modify_box');
         rv_box.css({
