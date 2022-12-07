@@ -16,15 +16,6 @@
 <style>
    
 </style>
-<!-- 
-    공연날짜, 회차까지는 item_list 만들어서 파일하나에 저장해놓고 / 거기서 정보 불러오기?
-    공연고유번호로 공연 날짜 구조는 미리 append하고 공연 날짜마다 공연회차도 더콤마 옵션 선택처럼 동적으로 append ...
-    
-    잔여좌석은 디비에서 불러옴.
-    
-    ? 공연정보 이미지들 어떤건 할인정보 이미지도 따로 있고 그러는데 섹션을 다 나눠놔야하는지, 아님 공연정보 부분만 가져올건지
-    ? 
- -->
 
 <body>
     <div id="wrap">
@@ -147,7 +138,7 @@
                 <div class="item_section">
                     <!--왼쪽-->
                     <div class="poster_box">
-                        <div class="img_box">
+                        <div class="poster_img">
                             <img src="./img/poster1.jpg" alt="">
                         </div>
                         <div class="like_box">
@@ -196,45 +187,57 @@
                 <!--예매하기섹션-->
                 <div class="booking_section">
                     <div class="booking_process">
-                        <div class="choice_title">날짜선택</div>
-                        <div class="choice_title">회차선택</div>
-                        <div class="choice_title">남은 좌석수</div>
-                    </div>
-                    <div class="option_choice_sec">
-                        <div class="option_box" id="option_date">
-                            <!-- <label for="date1"><input type="radio" name="date" id="date1">2022-11-22</label>
-                            <label for="date2"><input type="radio" name="date" id="date2">2022-11-22</label> -->
-                            <button type="button" class="choice_btn show_date">2022-11-22</button>
-                            <button type="button" class="choice_btn show_date">2022-11-22</button>
+                        <div class="option_choice_sec">
+                            <div class="choice_title">날짜선택</div>
+                            <div class="option_box" id="option_date">
+                                <button type="button" class="choice_btn show_date" name="perf_date">2022-11-22</button>
+                                <button type="button" class="choice_btn show_date" name="perf_date">2022-11-22</button>
+                            </div>
                         </div>
-                        <div class="option_box" id="option_time">
-                            <button type="button" class="choice_btn show_time">16 : 00</button>
-                            <button type="button" class="choice_btn show_time">18 : 00</button>
-                        </div>
-                        <div class="option_box">
-                            <div class="seat_stock"> 
-                                <div class="seat_ment">선택한 회차의 잔여석과 가격을<br>확인할 수 있어요!</div>
-                                <div class="seat_stock_box">
-                                    <div class="seat">S석 <span>150,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span></div>
-                                    <div class="seat">A석 <span>100,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span></div>
-                                    <div class="seat">R석 <span>70,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span></div>
 
+                        <div class="option_choice_sec">
+                            <div class="choice_title">회차선택</div>
+                            <div class="option_box" id="option_time">
+                                <button type="button" class="choice_btn show_time" name="perf_time">16 : 00</button>
+                                <button type="button" class="choice_btn show_time" name="perf_time">18 : 00</button>
+                            </div>
+                        </div>
+
+                        <div class="option_choice_sec">
+                            <div class="choice_title">남은 좌석수</div>
+                            <div class="option_box">
+                                    <div class="seat_ment">선택한 회차의 잔여석과 가격을 확인할 수 있어요!</div>
+                                    <div class="seat_stock_box">
+                                        <div class="seat">S석 <span>150,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span>
+                                        </div>
+                                        <div class="seat">A석 <span>100,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span>
+                                        </div>
+                                        <div class="seat">R석 <span>70,000원</span><span class="green"> (잔여석 : <span>100</span>석)</span>
+                                        </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="booking_btn_sec">
-                        <button class="booking_btn">예매하기</button>
+                        <button class="booking_btn" name="booking_btn">예매하기</button>
                     </div>
-
+                
                 </div>
+
 
                 <!-- 탭(공연상세,리뷰,예매안내) -->
                 <div class="datail_info_section">
                     <ul class="tabs">
-                        <li class="tab_title tab_border_bot" data-tab="tab_per_notice">공연상세정보</li>
-                        <li class="tab_title" data-tab="tab_review">관람평</li>
-                        <li class="tab_title" data-tab="tab_book_info">예매/취소 안내</li>
+                        <li class="tab_title" data-tab="tab_per_notice">공연상세정보
+                            <span></span>
+                        </li>
+                        <li class="tab_title" data-tab="tab_review">관람평
+                            <span></span>
+                        </li>
+                        <li class="tab_title" data-tab="tab_book_info">예매/취소안내
+                            <span></span>
+                        </li>
                     </ul>
                     <!-- 공연상세 -->
                     <div class="tab_content tab_current" id="tab_per_notice">
@@ -255,10 +258,6 @@
 
                         <div class="small_title">기획사 정보</div>
                         <table class="notice_table" id="organization_table">
-                            <colgroup>
-                                <col width=20%>
-                                <col width=*>
-                            </colgroup>
                             <tbody>
                                 <tr>
                                     <th scope="row" class="table_title">기획사</th>
@@ -273,32 +272,26 @@
 
                         <div class="small_title">상품정보제공 고시</div>
                         <table class="notice_table" id="info_notice_table">
-                            <colgroup>
-                                <col width=18%>
-                                <col width=32%>
-                                <col width=18%>
-                                <col width=32%>
-                            </colgroup>
                             <tbody>
                                 <tr>
                                     <th scope="row" class="table_title">주최/기획</th>
-                                    <td class="table_content">(주)에버모어엔터테인먼트</td>
+                                    <td class="table_content tb_left">(주)에버모어엔터테인먼트</td>
                                     <th scope="row" class="table_title">소비자상담</th>
-                                    <td class="table_content">02.3461.5150</td>
+                                    <td class="table_content tb_right">02.3461.5150</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="table_title">주연</th>
-                                    <td class="table_content">박웅, 강찬, 김용석, 김찬종, 조현우, 문경초, 한선천, 이동수, 은가은, 윤진솔,
+                                    <td class="table_content tb_left">박웅, 강찬, 김용석, 김찬종, 조현우, 문경초, 한선천, 이동수, 은가은, 윤진솔,
                                         허윤혜, 금조, 최유찬, 최호승, 정인지, 조원석, 이진호, 박근렬, 이강호, 이진우</td>
                                     <th scope="row" class="table_title">관람등급</th>
-                                    <td class="table_content">17세 이상 관람가 (2022년 기준 2006년생 포함 이전
+                                    <td class="table_content tb_right">17세 이상 관람가 (2022년 기준 2006년생 포함 이전
                                         출생자)</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="table_title">공연시간</th>
-                                    <td class="table_content">매직라운지쇼 시간표 참고 (1체험당 30분)</td>
+                                    <td class="table_content tb_left">매직라운지쇼 시간표 참고 (1체험당 30분)</td>
                                     <th scope="row" class="table_title">공연장소</th>
-                                    <td class="table_content">잠실체육관</td>
+                                    <td class="table_content tb_right">잠실체육관</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="table_title">취소/환불방법</th>
@@ -389,7 +382,7 @@
                                             <textarea name="review_content" id="review_content" placeholder="내용을 작성해주세요.(최소 10자 / 최대 500자)" maxlength="500"></textarea>
                                             <div class="text_counter_area"><span id ="text_counter">0</span>자/500자</div>
                                         </div>
-                                        <button id="btn_submit_review">후기 등록하기</button>
+                                        <button id="btn_submit_review" name="review_up_btn">후기 등록하기</button>
                                     </div>
                                 <!-- </form> -->
                             </div>
@@ -412,7 +405,7 @@
                                     <div class="rv_user_id">soy_4156</div>
                                     <div class="rv_uploaded_box">
                                         <div class="rv_uploaded" id="rv_upload_date">2022-11-11</div>
-                                        <div class="rv_uploaded" id="rv_uploaded_content">어쩌구 저쩌구 아주 훌룡한 공연 어쩌구 </div>
+                                        <div class="rv_uploaded" id="rv_uploaded_content">어쩌구 저쩌구 아주 훌룡한 공연 어쩌구 입니다. 많이들 보러오세요~~ </div>
                                     </div>
                                     <div class="rv_right_box">
                                         <div class="rv_star_rating star5"></div>
@@ -429,8 +422,8 @@
                                             <textarea name="rv_update" class="rv_update_content" id="rv_update" maxlength="500" rows="4"></textarea>
                                         </div>
                                         <div class="rv_update_undo">
-                                            <button class="rv_btns update_btn">등록</button>
-                                            <button class="rv_btns undo_btn">취소</button>
+                                            <button class="rv_btns update_btn" name="rv_update_btn">등록</button>
+                                            <button class="rv_btns undo_btn" name="rv_undo_btn">취소</button>
                                         </div>
                                     </div>
                                 </div>
@@ -517,9 +510,8 @@
                                 <div class="infos_left_sec">
                                     <table class="infos_table">
                                         <colgroup>
-                                            <col width="40%">
-                                            <col width="41%">
-                                            <col width="19%">
+                                            <col width="50%">
+                                            <col width="50%">
                                         </colgroup>
                                         <tr>
                                             <th scope="col" class="detail_tb_title">공연 관람일</th>

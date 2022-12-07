@@ -202,6 +202,10 @@ function form_chk(frm) {
         set_form_message('비밀번호에는 공백이 들어갈 수 없습니다.', frm.pw, 'pw')
         return false;
     }
+    if(frm.pw.value.search(/\s/) != -1){
+        set_form_message('비밀번호에는 공백이 들어갈 수 없습니다.', frm.pw, 'pw')
+        return false;
+    }
     if ((frm.pw_ag.value != frm.pw.value)) {
         set_form_message('동일한 비밀번호를 사용해주세요', frm.pw_ag, 'pw_ag')
         return false;
