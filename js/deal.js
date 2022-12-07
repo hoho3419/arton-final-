@@ -7,7 +7,7 @@ $(document).ready(function(){
 
         if($('.show_date').hasClass('btn_chk')){
             $('.show_time').css({
-                display : 'block'
+                visibility: 'visible'
             })
         }
         if($('.show_time').hasClass('btn_chk')){
@@ -121,13 +121,27 @@ $(document).ready(function(){
 
         let tab_id = $(this).attr('data-tab');
 
-		$('.tab_content').removeClass('tab_current');
+      $('.tab_content').removeClass('tab_current');
         $("#"+tab_id).addClass('tab_current');
 
-        $('.tab_title').removeClass('tab_border_bot');
-        $(this).addClass('tab_border_bot');
+        $(this).children('span').css({
+            width :'100%'
+        });
+        $(this).siblings().children('span').css({
+            width : 0
+        })
+
+        $(this).css({
+            color:'#008049'
+        })
+        $(this).siblings().css({
+            color: '#000'
+        })
+
+        // $('.tab_title').removeClass('tab_border_bot');
+        // $(this).addClass('tab_border_bot');
         
-	});
+   });
 
     //리뷰탭 - 별점
     $('input[name="rating"]').click(function(){
@@ -174,8 +188,8 @@ $(document).ready(function(){
                 review = `<div class="rv_list_box">
                         <div class="rv_user_id">${maskingid(tmp_id)}</div>
                         <div class="rv_uploaded_box">
-                            <div class="rv_uploaded" id="rv_upload_date">${today}</div>
-                            <div class="rv_uploaded" id="rv_uploaded_content">${content}</div>
+                            <div class="rv_uploaded rv_upload_date">${today}</div>
+                            <div class="rv_uploaded rv_upload_content">${content}</div>
                         </div>
                         <div class="rv_right_box">
                             <div class="rv_star_rating star${star_rate}"></div>
@@ -189,7 +203,7 @@ $(document).ready(function(){
                         <div class="rv_modify"> 
                             <div class="rv_user_id">${tmp_id}</div>
                             <div class="rv_update_content_area">
-                                <textarea name="rv_update" class="rv_update_content" id="rv_update" maxlength="500" rows="4"></textarea>
+                                <textarea name="rv_update" class="rv_update_content" maxlength="500" rows="4"></textarea>
                             </div>
                             <div class="rv_update_undo">
                                 <button class="rv_btns update_btn">등록</button>
@@ -204,8 +218,8 @@ $(document).ready(function(){
                     /*let review =    `<div class="rv_list_box">
                         <div class="rv_user_id">${maskingid(tmp_id)}</div>
                         <div class="rv_uploaded_box">
-                            <div class="rv_uploaded"><span id="rv_upload_date">${today}</span></div>
-                            <div class="rv_uploaded"><span id="rv_uploaded_content">${content}</span></div>
+                            <div class="rv_uploaded">${today}</span></div>
+                            <div class="rv_uploaded">${content}</span></div>
                         </div>
                         <div class="rv_right_box">
                             <div class="rv_star_rating star${star_rate}"></div>
@@ -219,7 +233,7 @@ $(document).ready(function(){
                         <div class="rv_modify"> 
                             <div class="rv_user_id">${tmp_id}</div>
                             <div class="rv_update_content_area">
-                                <textarea name="rv_update" class="rv_update_content" id="rv_update" maxlength="500" rows="2">${content}</textarea>
+                                <textarea name="rv_update" class="rv_update_content" maxlength="500" rows="2">${content}</textarea>
                             </div>
                             <div class="rv_update_undo">
                                 <button class="rv_btns update_btn">등록</button>
@@ -271,7 +285,7 @@ $(document).ready(function(){
     // $('.rv_modify_btn').click(function(){
     $(document).on('click','.rv_modify_btn',function(){
         
-        let review_text = $(this).parents('.rv_list_box').children('.rv_uploaded_box').children('#rv_uploaded_content').text();
+        let review_text = $(this).parents('.rv_list_box').children('.rv_uploaded_box').children('.rv_upload_content').text();
         console.log(review_text);
         $(this).parents('.rv_list_box').next('.rv_modify_box').children().children('.rv_update_content_area').children('.rv_update_content').val(review_text);
 
@@ -303,7 +317,7 @@ $(document).ready(function(){
         // let reupload = $(this).parents('.rv_update_content').text().trim();
         let reupload = $(this).parent().prev().children('.rv_update_content').val().trim();
         console.log(reupload);
-        $(this).parents('.rv_modify_box').prev('.rv_list_box').children('.rv_uploaded_box').children('#rv_uploaded_content').text(reupload);
+        $(this).parents('.rv_modify_box').prev('.rv_list_box').children('.rv_uploaded_box').children('.rv_upload_content').text(reupload);
         //등록 버튼 누르면, 수정된 리뷰 잡는 것까지 됨. 이걸 디비에 저장하고 다시 리스트를 리로드 하면 된다.
 
 
@@ -316,7 +330,7 @@ $(document).ready(function(){
             display : 'none'
         })
         // 수정된 리뷰를 다시 등록하는거에 어려움을 느껴서 이건 백부분에 저장하고 다시 리로드 하는 방법으로 하는거 어떨지....
-        // md_box.prev('.rv_list_box').children().children().children('#rv_uploaded_content').val(reupload); 
+        // md_box.prev('.rv_list_box').children().children().children('.rv_upload_content').val(reupload); 
     })
 
     //수정 버튼 누르면 나오는 수정폼의 "취소" 버튼
@@ -348,21 +362,5 @@ $(document).ready(function(){
 
         //     default : alert("별점을 선택해주세요.");
         // }
-        
-    // 맨 아래 오른쪽에 이미지 누르면 페이지 상단으로 천천히 가기
-    $('.btn_gotop').click(function(){
-        $('html, body').animate({scrollTop:0},400);
-    });
-    // 햄버거 버튼 누르면 왼쪽에 있는 사이드 바 나오가
-    $(document).on('click', '.hamberg', function(){
-        $('.ham_box').toggleClass('ham_active')
-    });
-    $('.side_hamberg').click(function(){
-        $('.hamberg').trigger('click')
-    })
 
 });
-
-
-
-

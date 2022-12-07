@@ -244,7 +244,7 @@
     position: fixed;
     left: 0;
     top: 0px;
-    z-index: 99999;
+    z-index: 99999999;
     box-sizing: border-box;
 }
 #ham_remove{
@@ -257,7 +257,6 @@
 }
 .ham_active {
     transform: translateX(0);
-    z-index: 9999999;
 }
 .ham_menu_ul{
     line-height: 70px;

@@ -53,12 +53,13 @@
     bottom: 50%;
     z-index: 99;
     cursor: pointer;
+    transform: translateY(-50%);
 }
 .slide_prev {
-    left: 30px;  
+    left: 44px;  
 }
 .slide_next {
-    right: 30px;
+    right: 28px;
 }
 /* 이미지 가운데로 올시 -> scale */
 .on{
@@ -527,7 +528,11 @@
 
 /* and (min-width: 648px)  */
 @media screen and (max-width: 864px) {
-
+    /* main  */
+    .slide {
+        width: 30px;
+        height: 40px;
+    }
     /* what's hot */
     .hot_sec {
         width: calc(100% / 4);
