@@ -479,7 +479,7 @@
     width: 100%;
     padding: 5px 0;
 }
-#rv_upload_date {
+.rv_upload_date {
     font-size: 12px;
 }
 .rv_right_box {
@@ -779,7 +779,7 @@
         text-align: right;
     }
     .rv_modify_delete div{display: inline;}
-    #rv_upload_date{display: none;}
+    .rv_upload_date{display: none;}
     .rv_star_rating{display: none;}
     .rv_modify{
         flex-direction: column;
