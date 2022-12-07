@@ -362,5 +362,11 @@ $(document).ready(function(){
 
         //     default : alert("별점을 선택해주세요.");
         // }
-
+        // 햄버거 버튼 누르면 왼쪽에 있는 사이드 바 나오가
+        $(document).on('click', '.hamberg', function(){
+            $('.ham_box').toggleClass('ham_active')
+        });
+        $('.side_hamberg').click(function(){
+            $('.hamberg').trigger('click')
+        })
 });
