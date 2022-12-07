@@ -8,14 +8,13 @@
     width: 0;
     height: 5px;
     position: absolute; 
-    top:100%;
+    top: 110%;
     left: 0;
 }
 .menu_ul li:hover{
     cursor: pointer;
     color:#008049!important;;
 }
-.menu_ul li:hover span,
 .u_line{
     transition: all 0.3S;
     width: 100% !important;

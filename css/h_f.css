@@ -110,7 +110,7 @@
     bottom: -7px;
     width: 0;
     height: 5px;
-    background-color: #22974a;
+    background-color: #008049;
 }
 /* 마우스 호버시 밑줄 왼쪽에서 오른쪽 */
 .menu_ul > li:hover::after{
