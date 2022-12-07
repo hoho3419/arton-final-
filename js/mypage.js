@@ -55,7 +55,6 @@ $(document).ready(function(){
                             </div>
                             <div class="info_text">
                                 <div class="perf_title">하리보 골드베렌 100주년 생일 기념전</div>
-                                <div class="perf_date">2022.10.13 ~ 2023.03.12</div>
                                 <div class="perf_spot">안녕 인사동 B1 인사센트럴뮤지엄</div>
                             </div>
                         </td>
