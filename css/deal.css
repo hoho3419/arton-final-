@@ -1,10 +1,6 @@
 body{margin: 0%;}
 ul{list-style: none; margin: 0; padding: 0%;}
 a{text-decoration: none; color: inherit;}
-.contents_area{
-    width: 1200px;
-    margin: 0 auto;
-}
 /* *****************************공연제목***************************** */
 .title_section{
     width: 100%;

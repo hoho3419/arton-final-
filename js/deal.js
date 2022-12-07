@@ -348,6 +348,18 @@ $(document).ready(function(){
 
         //     default : alert("별점을 선택해주세요.");
         // }
+        
+    // 맨 아래 오른쪽에 이미지 누르면 페이지 상단으로 천천히 가기
+    $('.btn_gotop').click(function(){
+        $('html, body').animate({scrollTop:0},400);
+    });
+    // 햄버거 버튼 누르면 왼쪽에 있는 사이드 바 나오가
+    $(document).on('click', '.hamberg', function(){
+        $('.ham_box').toggleClass('ham_active')
+    });
+    $('.side_hamberg').click(function(){
+        $('.hamberg').trigger('click')
+    })
 
 });
 
