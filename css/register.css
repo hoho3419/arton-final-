@@ -21,6 +21,20 @@
 .form_sec{
     width: 330px;
 }
+/* 아이디 중복 체크*/
+#id_dup{
+    display: inline-block;
+    height: 30px;
+    padding: 0 13px;
+    border: 1px solid #008049;
+    border-radius: 28px;
+    font-size: 12px;
+    line-height: 29px;
+    font-weight: 700;
+    background: white;
+    margin-top: 6px;
+    cursor: pointer;
+}
 .form_text{
     display: block;
     margin-top: 10px;
