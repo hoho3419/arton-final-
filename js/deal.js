@@ -121,7 +121,7 @@ $(document).ready(function(){
 
         let tab_id = $(this).attr('data-tab');
 
-		$('.tab_content').removeClass('tab_current');
+      $('.tab_content').removeClass('tab_current');
         $("#"+tab_id).addClass('tab_current');
 
         $(this).children('span').css({
@@ -141,7 +141,7 @@ $(document).ready(function(){
         // $('.tab_title').removeClass('tab_border_bot');
         // $(this).addClass('tab_border_bot');
         
-	});
+   });
 
     //리뷰탭 - 별점
     $('input[name="rating"]').click(function(){
@@ -362,9 +362,11 @@ $(document).ready(function(){
 
         //     default : alert("별점을 선택해주세요.");
         // }
-
+        // 햄버거 버튼 누르면 왼쪽에 있는 사이드 바 나오가
+        $(document).on('click', '.hamberg', function(){
+            $('.ham_box').toggleClass('ham_active')
+        });
+        $('.side_hamberg').click(function(){
+            $('.hamberg').trigger('click')
+        })
 });
-
-
-
-

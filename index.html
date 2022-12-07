@@ -19,8 +19,49 @@
 <body>
     <div id="wrap">
         <img src="./img/상단이동icon.png" alt="" class="btn_gotop">
+        <div class="ham_box">
+            <div class="side_ham_box">
+                <div class="side_hamberg">
+                    <div class="line" id="line_top"></div>
+                    <div class="line" id="line_mid"></div>
+                    <div class="line" id="line_bot"></div>
+                </div>
+                <a href="#"><div class="ham_head">마이페이지</div></a>
+                <a href="#"><div class="ham_head">로그인</div></a>
+            </div>
+            <ul class="ham_menu_ul">
+                <li>
+                    <a href="#">콘서트</a>
+                </li>
+                <li>
+                    <a href="#">뮤지컬</a>
+                </li>
+                <li>
+                    <a href="#">연극</a>
+                </li>
+                <li>
+                    <a href="#">클래식</a>
+                </li>
+                <li>
+                    <a href="#">전시</a>
+                </li>
+                <li>
+                    <a href="#">아동</a>
+                </li>
+            </ul>
+            <div class="ham_reg">
+                <a href="#"><div class="ham_rank">랭킹</div></a>
+                <img src="./img/art_pick/concert_1.jpg" alt="">
+                <div class="ham_per">짙은겨울</div>
+            </div>
+        </div>
         <header class="header">
             <div class="header_area">
+                <div class="hamberg">
+                    <div class="line" id="line_top"></div>
+                    <div class="line" id="line_mid"></div>
+                    <div class="line" id="line_bot"></div>
+                </div>
                 <div class="logo">아트온 로고<a href="#"></a></div>
                 <ul class="menu_ul">
                     <li>
@@ -253,8 +294,6 @@
                                 “ 세 여성이 펼쳐내는, 인생의 파도같은 이야기 ”
                             </div>
                         </div>
-                    </div>
-                    <div class="art_button" >
                     </div>
                 </div>
             </div>
@@ -515,10 +554,12 @@
             <div class="media_section">
                 <div class="media_info">
                     <div class="media_attention"><span>FOUCUS ON</span></div>
-                    <div class="media_title">
-                        <p>뮤지컬</p>
-                        <p>영웅</p> 
-                    </div>
+                    <a href="#">
+                        <div class="media_title">
+                            <p>뮤지컬</p>
+                            <p>영웅</p> 
+                        </div>
+                    </a>
                     <div class="media_comment">
                         <p> 간절했던 염원</p>
                         <p>그날을 기억하라! </p>
@@ -528,9 +569,9 @@
             </div>
             <div class="review_section">
                 <h2>REVIEW</h2>
+                <div class="btn" id="review_r_button"></div>
+                <div class="btn" id="review_l_button"></div>
                 <div class="review_area">
-                    <div class="btn" id="review_r_button"></div>
-                    <div class="btn" id="review_l_button"></div>
                     <div class="review_img_box review_item1">
                         <a href="#">
                             <div class="review_img" style="background: url(./img/넓은하늘_연극.png) no-repeat center / contain">
