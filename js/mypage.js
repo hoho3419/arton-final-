@@ -1,20 +1,49 @@
 $(document).ready(function(){
-        //탭!!!!!!!!
-        $('.mytabs_li').click(function(){
+        // function block_btn(){
+        //     $(this).css({
+        //         display : 'none'
+        //     })
+        //     alert("아직 구현중인 기능입니다!")
+        // }
 
-            let tab_id = $(this).attr('data-tab');
-    
-            $('.mypage_tab').removeClass('tab_curr');
-            $("#"+tab_id).addClass('tab_curr');
-    
+        //탭!!!!!!!!
+        $('li[data-tab="mytab_mypage"]').click(function(){
+            $(this).children('span').css({
+                        width :'100%'
+                    });
             $(this).css({
-                color:'#008049'
-            })
-            $(this).siblings().css({
-                color: '#000'
-            })
+                        color:'#008049'
+                    });
+            
+        });
+        $('li[data-tab="mytab_tit_chk"]').click(function(){
+            alert("아직 구현중인 기능입니다!")
+        });
+        $('li[data-tab="mytab_likes"]').click(function(){
+            alert("아직 구현중인 기능입니다!")
         });
 
+        // $('.mytabs_li').click(function(){
+
+        //     // let tab_id = $(this).attr('data-tab');
+        //     //
+        //     // $('.mypage_tab').removeClass('tab_curr');
+        //     // $("#"+tab_id).addClass('tab_curr');
+
+        //     $(this).children('span').css({
+        //         width :'100%'
+        //     });
+        //     $(this).siblings().children('span').css({
+        //         width : 0
+        //     })
+    
+        //     $(this).css({
+        //         color:'#008049'
+        //     })
+        //     $(this).siblings().css({
+        //         color: '#000'
+        //     })
+        // });
 
     let myticket = `<tr>
                         <td class="buy_date">2022.12.01</td>
@@ -26,7 +55,6 @@ $(document).ready(function(){
                             </div>
                             <div class="info_text">
                                 <div class="perf_title">하리보 골드베렌 100주년 생일 기념전</div>
-                                <div class="perf_date">2022.10.13 ~ 2023.03.12</div>
                                 <div class="perf_spot">안녕 인사동 B1 인사센트럴뮤지엄</div>
                             </div>
                         </td>
@@ -110,9 +138,11 @@ $(document).ready(function(){
 
     //더보기> 버튼 누르면 해당 섹션의 탭으로 넘어가게 trigger
     $('.mytit_more_btn').click(function(){
-        $('li[data-tab="mytab_tit_chk"]').trigger('click');
+        // $('li[data-tab="mytab_tit_chk"]').trigger('click');
+        alert("아직 구현중인 기능입니다!")
     })
     $('.mylikes_more_btn').click(function(){
-        $('li[data-tab="mytab_likes"]').trigger('click');
+        // $('li[data-tab="mytab_likes"]').trigger('click');
+        alert("아직 구현중인 기능입니다!")
     })
 });

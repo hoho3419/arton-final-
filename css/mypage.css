@@ -24,20 +24,17 @@
 }
 .mytabs_li:hover{
     cursor: pointer;
-    color:#008049;
+    color:#008049 !important;
 }
 .mytabs_li:hover span{
     transition: all 0.3S;
-    width: 100%;
+    width: 100% !important;
 }
 .mypage_tab{
     display: none;
 }
 .tab_curr{
     display: block;
-}
-.tab_event{
-    border-bottom: 5px solid #008049;
 }
 /*****회원정보섹션 - 사람아이콘 보여지는 부분****/
 .myinfo_box{
