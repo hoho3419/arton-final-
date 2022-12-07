@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    //* *************************** 헤더 언더바 ***************************** */
+    let curr_num = get_url_info("cate");
+    $('.menu_ul > li').find('span').removeClass('u_line')
+    $('.menu_ul > li').eq(curr_num).find('span').addClass('u_line')
+
     /* *************************** h_f fixed ***************************** */
     let box_heigt = $('.main_banner').height();
     let box_top = $('.main_banner').offset().top + box_heigt;
@@ -206,6 +211,8 @@ $(document).ready(function () {
             $('.per_title_item').css({ pointerEvents: 'auto' })
         }, timer);
     }
+
+    $('.menu_ul li::after').css({display:'none'})//헤더에 after 카테고리만 빼주려고 넣은 것
 })
 
 /* *************************** url ***************************** */
@@ -270,6 +277,7 @@ function load_list(idx, show_qty) { // idx = 배열에 접근하는 숫자, show
 
     }
 }
+
 
 
 
