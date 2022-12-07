@@ -1,3 +1,6 @@
+#wrap{
+    min-width: 320px
+}
 /* ***************************메인 슬라이드 ***************************** */
 /*상단이동*/
 .btn_gotop{
@@ -10,39 +13,44 @@
     z-index: 999999;
     display: none;
 }
-.main_banner {
 
-    max-width: 1410px;
-    min-width: 1300px;
+
+.main_banner {
+    max-width: 1410px; 
     overflow: hidden;
     margin: 0 auto;
-    height: 500px;
-
+    position: relative;
 }
 .banner_box{
     display: flex;
     width: 100%;
-    height: 100%;
     position: relative;
-    margin-left: 40px;
+
+    overflow: hidden;
+    margin: 0 auto;
+    margin-left: 53px;
+    padding-bottom: 58%;
+    margin-top: 35px;
+
 }
 .banner {
     margin-top: 50px;
     cursor: pointer;
     position: absolute;
     top: 0;
+    width: calc(100% / 3 - (30px * 3));
+    margin-right: 30px;
 
 }
 .banner img{
-    width: 365px;
-    height: 405px;
+    width: 100%;
 }
 /*슬라이드 버튼*/
 .slide{
     width: 50px;
     height: 60px;
     position: absolute;
-    top: 280px;
+    bottom: 50%;
     z-index: 99;
     cursor: pointer;
 }
@@ -59,6 +67,7 @@
 
 
 /* *************************** what's hot ***************************** */
+
 .hot_sec_title{
     width: 100%;
     height: 152px;
@@ -79,7 +88,6 @@
 .hot_list{
     width: 100%;
     max-width: 1200px;
-    height: 900px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -101,8 +109,9 @@
     background-color: #f1c40f;
     border-radius: 18px;
     position: absolute;
-    top: 195px;
-    right: 5px;
+    top: 53%;
+    /* %로 해야 따라다님 */
+    right: 2%;
 }
 .hot_per_place{
     color: #828282;
@@ -132,11 +141,16 @@
     font-style: italic;
     color: #008049;
 }
+
+    
 /* *************************** ranking ***************************** */
 .ranking_recommend{
     height: 650px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 1520px;
+    margin: auto;
 }
 .ranking{
     width: 478px;
@@ -254,6 +268,9 @@
     max-width: 230px;
     max-height: 50px;
 }
+
+    
+
 /* *************************** recommend(what about this?) ***************************** */
 .recommend{
     width: 900px;
@@ -339,6 +356,7 @@
     width: 100%;
 }
 
+
 /* *************************** ARToN'S PICK ***************************** */
 /*텍스트*/
 .picks_title{
@@ -367,13 +385,14 @@
 }
 .picks_list{
     display: flex;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
-    height: 900px;
+    /* height: 900px; */
 }
 .picks_box{
-    width: calc(1200px / 4);
+    width: calc(100% / 4);
     box-sizing: border-box;
     height: 400px;
     padding: 0 50px;
@@ -390,11 +409,16 @@
     justify-content: center;
     align-items: center;
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
+    padding: 0 5px ;
+    box-sizing: border-box;
     text-overflow: ellipsis;
     transition: .2s;
     overflow: hidden;
+}
+.msg_txt{
+    width: 90%;
 }
 .picks_per_pla{
     font-style: italic;
@@ -417,13 +441,247 @@
 }
 /*텍스트 라인 넘치지 않게 하는 용 */
 .picks_txt div{
-    max-width: 216px;
-    max-height: 50px;
+    width: 216px;
+    height: 33px;
     text-overflow: ellipsis;
-    white-space: normal;
+    white-space: nowrap;
     overflow: hidden;
 }
 .picks_per_name{
     height: 40px;
 }
+
+
+/* *************************** 반응형 ***************************** */
+@media screen and (max-width: 1407px) {
+
+    /* ranking / what about this*/
+    .w_a_txtbox {
+        display: none !important;
+    }
+
+    .w_a_wrap>a>img {
+        top: 22%;
+        left: 11%;
+    }
+
+    /* ranking */
+    .ranking {
+        width: 700px;
+    }
+
+    .ranking_box {
+        width: 100%;
+    }
+
+    .what_about_body {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .what_about_title {
+        margin-left: 116px;
+        margin-bottom: 10px;
+    }
+
+    .ranking_recommend {
+        height: 1138px;
+    }
+
+}
+
+@media screen and (max-width:1168px) {
+
+    /* and (min-width: 830px)  */
+    /* 메인 */
+    .banner {
+        margin-top: 50px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        width: calc(100% / 3 - (20px * 3));
+        margin-right: 20px;
+    }
+
+
+    /* hot*/
+    .hot_sec {
+        width: calc(100% / 5);
+    }
+
+    .hot_sec_dis_box {
+        left: 55%;
+    }
+
+    .hot_sec:nth-child(9),
+    .hot_sec:nth-child(10) {
+        display: none;
+    }
+
+    .picks_box {
+        width: calc(100% / 3);
+    }
+
+
+}
+
+/* and (min-width: 648px)  */
+@media screen and (max-width: 864px) {
+
+    /* what's hot */
+    .hot_sec {
+        width: calc(100% / 4);
+    }
+
+    .hot_sec:nth-child(9) {
+        display: block;
+    }
+
+    .hot_sec:last-child {
+        display: none;
+    }
+
+    /* what about this */
+    .w_a_txtbox {
+        display: none !important;
+    }
+
+    .w_a_wrap>a>img {
+        width: 254px;
+        height: 339px;
+        position: absolute;
+        top: 23%;
+        left: 4%;
+        display: none;
+        border-radius: 25px;
+    }
+
+    .what_about_body {
+        width: 540px;
+    }
+
+    .per_title_item>span {
+        font-size: 23px;
+    }
+
+    .recommend {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ranking */
+    .ranking {
+        width: 540px;
+    }
+
+    .ranking_box {
+        width: 100%;
+    }
+
+    .w_a_txtbox {
+        display: none !important;
+    }
+
+    /* ranking/ w a t 높이 */
+    .ranking_recommend {
+        height: 1241px;
+    }
+
+    /* arton's pick*/
+    .picks_box {
+        width: calc(100% / 2);
+    }
+
+    .picks_title_text {
+        font-size: 30px;
+    }
+
+
+}
+
+@media screen and (max-width: 654px) {
+
+    .hot_sec {
+        width: calc(100% / 3);
+    }
+
+    .hot_sec:last-child {
+        display: block;
+    }
+
+    .title_text {
+        font-size: 30px;
+    }
+
+    /* what bout this : 사라짐*/
+    .recommend {
+        display: none !important;
+    }
+
+    .ranking_recommend {
+        height: 549px;
+    }
+
+    .picks_box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .picks_title_text {
+        font-size: 30px;
+    }
+
+    /* ranking */
+    .ranking_list_box {
+        width: 310px;
+    }
+
+    .ranking_box {
+        width: 310px;
+    }
+
+    .r_box_list:hover .ranking_img {
+        display: none;
+    }
+
+    .r_box_list:hover .ranking_txt {
+        left: 13%;
+    }
+
+}
+
+@media screen and (max-width: 596px) {
+
+    /* 메인 슬라이드 사라짐 */
+    .main_banner {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .whats_hot {
+        margin-top: 0;
+    }
+
+    /* what's hot*/
+    .hot_sec {
+        width: calc(100% / 2);
+    }
+
+    .hot_sec:last-child {
+        display: block;
+    }
+
+
+
+
+}
+
+
+
+
+    
+
 
