@@ -532,6 +532,7 @@ iframe{
     position: absolute;
     left: 35%;
     top: 0%;
+    border: 0px;
 }
 /* ***************************** REVIEW ***************************** */
 .review_section{
