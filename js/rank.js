@@ -53,13 +53,13 @@ $(document).ready(function(){
         let tmp = `
         <li class="rank_list_box">
             <div class="list_rank">${i +5}위</div>
-            <a href="#">
+            <a href="deal.html">
                 <div class="list_img_box">
-                    <img class="list_img" src="./img/rank/rank_1.jpg" alt="">
+                    <img class="list_img" src="./img/rank/rank_1.jpg" alt="이미지">
                 </div>
             </a>
             <div class="list_title_box">
-                <a href="#">
+                <a href="deal.html">
                     <p class="list_title">2022 HAPPY CHANYEOL-DAY</p>
                 </a>
                 <div class="wish_total">
